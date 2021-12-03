@@ -18,6 +18,10 @@ export default function Home({ content, nap }) {
   console.log(content);
   console.log(nap);
 
+  const image_loader = ({ src, width }) => {
+    return `https://images.ctfassets.net/snep566vvl34/${src}?w=${width}`;
+  };
+
   return (
     <>
       <NextSeo
@@ -42,37 +46,40 @@ export default function Home({ content, nap }) {
         }}
       />
       <Navbar />
-      <Hero SEOHeading={content.seoTittel} heading="Heading" imageSource={content.bildeMat.url} imageAlt="alt" />
+      <Hero
+        SEOHeading={content.seoTittel}
+        heading={content.hovedtittel}
+        imageSource={content.bildeMat.url.slice(42)}
+        imageAlt="alt"
+        loader={image_loader}
+      />
       <SocialProofBanner />
       <Layout>
-        <Grid>
+        <Grid c="gap-y-56 md:gap-y-96 lg:gap-y-160">
           <FourEightSix>
             <HorizontalCardCTA SEOHeading={content.seoTittelMat} heading={content.tittelMat}>
               {documentToReactComponents(content.brdtekstMat.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
-
-          <FourEightSix>
-            <div className="relative">
-              <Image
-                src={`/${content.bildeMat.url.slice(36)}`}
-                alt={content.bildeMat.description}
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
+          <FourEightSix c="grid justify-items-stretch relative">
+            <Image
+              loader={image_loader}
+              src={`${content.bildeMat.url.slice(42)}`}
+              alt={content.bildeMat.description}
+              layout="fill"
+              className="object-cover"
+            />
           </FourEightSix>
 
-          <FourEightSix>
-            <div className="relative">
-              <Image
-                src={`${content.bildeMat.url.slice(41)}`}
-                alt={content.bildeMat.description}
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
+          <FourEightSix c="grid justify-items-stretch relative">
+            <Image
+              loader={image_loader}
+              src={`${content.bildeMat.url.slice(42)}`}
+              alt={content.bildeMat.description}
+              layout="fill"
+              className="object-cover"
+            />
           </FourEightSix>
           <FourEightSix c="lg:col-start-7">
             <HorizontalCardCTA SEOHeading={content.seoTittelOvernatting} heading={content.tittelOvernatting}>
@@ -87,26 +94,24 @@ export default function Home({ content, nap }) {
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
-          <FourEightSix>
-            <div className="relative">
-              <Image
-                src={`/${content.bildeMat.url.slice(36)}`}
-                alt={content.bildeMat.description}
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
+          <FourEightSix c="grid justify-items-stretch relative">
+            <Image
+              loader={image_loader}
+              src={`${content.bildeMat.url.slice(42)}`}
+              alt={content.bildeMat.description}
+              layout="fill"
+              className="object-cover"
+            />
           </FourEightSix>
 
-          <FourEightSix c="">
-            <div className="relative">
-              <Image
-                src={`/${content.bildeMat.url.slice(36)}`}
-                alt={content.bildeMat.description}
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
+          <FourEightSix c="grid justify-items-stretch relative">
+            <Image
+              loader={image_loader}
+              src={`${content.bildeMat.url.slice(42)}`}
+              alt={content.bildeMat.description}
+              layout="fill"
+              className="object-cover"
+            />
           </FourEightSix>
           <FourEightSix c="lg:col-start-7">
             <HorizontalCardCTA SEOHeading={content.seoKursOgKonferanser} heading={content.tittelKursOgKonferanser}>
@@ -121,15 +126,14 @@ export default function Home({ content, nap }) {
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
-          <FourEightSix c="">
-            <div className="relative">
-              <Image
-                src={`/${content.bildeMat.url.slice(36)}`}
-                alt={content.bildeMat.description}
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
+          <FourEightSix c="grid justify-items-stretch relative">
+            <Image
+              loader={image_loader}
+              src={`${content.bildeMat.url.slice(42)}`}
+              alt={content.bildeMat.description}
+              layout="fill"
+              className="object-cover"
+            />
           </FourEightSix>
           <InfoNAPSection email={nap.epost} phone_number={nap.telefonnummer} adress={nap.adresse} />
         </Grid>
@@ -154,6 +158,7 @@ export async function getStaticProps() {
   {
     forsideCollection{
       items{
+        hovedtittel
         seoTittel
         seoTittelMat
         seoTittelBryllup
