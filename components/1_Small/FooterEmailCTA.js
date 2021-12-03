@@ -1,6 +1,6 @@
 export const FooterEmailCTA = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-16 md:mt-0 mb-24 md:mb-56 lg:mb-0">
       <h2 className="text-white">Hold kontakten!</h2>
       <p className="text-white text-body_medium mb-24">
         Vil du få et nyhetsbrev i ny og né med bilder og nyheter fra oss? Meld deg på nyhetsbrevet vårt!
@@ -35,7 +35,7 @@ export const FooterEmailCTA = () => {
                           </span>
                         )}
                       </div> */}
-        <button className="bg-primary_700 text-body_medium px-12 font-semibold" type="submit">
+        <button className="bg-primary_700 text-body_medium px-24 font-semibold" type="submit">
           Meld meg på
         </button>
       </div>

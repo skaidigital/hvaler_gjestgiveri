@@ -1,4 +1,4 @@
-import { FourFourFour, FourFourThree, Grid, Layout, SectionNav } from "../../1_Small/Base";
+import { FourFourFour, FourFourThree, FourSixFour, Grid, Layout, SectionNav } from "../../1_Small/Base";
 import { FooterEmailCTA } from "../../1_Small/FooterEmailCTA";
 import { FooterHeading } from "../../1_Small/FooterHeading";
 import { FooterLink } from "../../1_Small/FooterLink";
@@ -9,10 +9,10 @@ export const Footer = () => {
       <SectionNav id="footer-main-content" c="border-1 border-b border-neutral_200 bg-secondary_700">
         <Layout>
           <Grid c=" text-white">
-            <FourFourFour>
+            <FourSixFour>
               <FooterEmailCTA />
-            </FourFourFour>
-            <FourFourThree c="lg:col-start-6">
+            </FourSixFour>
+            <FourFourThree c="lg:col-start-6 mb-24 md:mb-56 lg:mb-0">
               <FooterHeading>Navigasjon</FooterHeading>
               <div className="flex flex-col">
                 <FooterLink href="/">Hjem</FooterLink>
@@ -22,7 +22,7 @@ export const Footer = () => {
                 <FooterLink href="kontakt-oss">Kontakt oss</FooterLink>
               </div>
             </FourFourThree>
-            <FourFourFour>
+            <FourFourFour c="mb-24 md:mb-56 lg:mb-0">
               <FooterHeading>Epost</FooterHeading>
               <a className="text-white underline" target="blank" href="mailto:mail@gmail.com">
                 mail@mailersen.com

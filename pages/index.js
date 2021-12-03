@@ -12,6 +12,7 @@ import { options } from "../components/1_Small/ContentfulOptions";
 import { Hero } from "../components/1_Small/Hero";
 import { SocialProofBanner } from "../components/1_Small/SocialProofBanner";
 import { InfoNAPSection } from "../components/1_Small/InfoNAPSection";
+import { InfoBanner } from "../components/1_Small/InfoBanner";
 
 export default function Home({ content, nap }) {
   !content && RedirectPage();
@@ -45,6 +46,7 @@ export default function Home({ content, nap }) {
           cardType: "summary_large_image",
         }}
       />
+      <InfoBanner banner_message="Dette er en melding vi vil at folk skal se" />
       <Navbar />
       <Hero
         SEOHeading={content.seoTittel}
