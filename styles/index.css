@@ -1,8 +1,33 @@
 /*!* Makes tailwind work */
 @tailwind base;
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/source-sans-pro-v18-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/source-sans-pro-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* source-sans-pro-600 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("/fonts/source-sans-pro-v18-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/source-sans-pro-v18-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/source-sans-pro-v18-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/source-sans-pro-v18-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 body {
   /* * Select font and swap for removing FOWT */
-  font-family: Montserrat;
+  font-family: Source Sans Pro;
   font-display: swap;
   /* * User can't select text or copy content */
   -webkit-touch-callout: none; /* iOS Safari */
@@ -27,6 +52,12 @@ body {
 
 /* TODO Change the settings to match the design */
 @layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-black_87;
+  }
   h1 {
     @apply text-h2;
     @apply lg:text-h1;
@@ -35,16 +66,23 @@ body {
   h2 {
     @apply text-h3;
     @apply lg:text-h2;
-    @apply font-semibold;
+    @apply font-bold;
   }
   h3 {
     @apply text-h4;
     @apply lg:text-h3;
     @apply font-semibold;
   }
+  h4 {
+    /* @apply text-body_regular */
+    @apply lg:text-h4;
+    @apply font-semibold;
+  }
   p,
-  a {
+  a,
+  span {
     @apply text-body_regular;
+    @apply text-neutral_700;
   }
   a {
     @apply: cursor-pointer;

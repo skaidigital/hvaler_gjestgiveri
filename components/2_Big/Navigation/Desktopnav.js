@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Layout } from "../../1_Small/Base";
+import { PrimaryButtonHref } from "../../1_Small/Buttons";
+import { NavLink } from "../../1_Small/NavLink";
 
 export const Desktopnav = () => {
   return (
@@ -8,23 +10,19 @@ export const Desktopnav = () => {
         <div className="self-center ">
           <Link href="/">
             <a>
-              <p className="text-h3 font-semibold flex mb-0 ">Logo</p>
+              <p className="text-h4 font-semibold flex mb-0 ">Hvaler Gjestgiveri</p>
             </a>
           </Link>
         </div>
-        <div className="text-label text-dark font-medium flex self-center">
-          <Link href="/">
-            <a className="ml-32 mb-0 nav">Hjem</a>
-          </Link>
-          <Link href="/meny">
-            <a className="ml-32 mb-0 nav">Menyen</a>
-          </Link>
-          <Link href="/om-oss">
-            <a className="ml-32 mb-0 nav">Om oss</a>
-          </Link>
-          <Link href="/kontakt">
-            <a className="ml-32 mb-0 nav">Kontakt</a>
-          </Link>
+        <div className="flex items-center">
+          <NavLink href="/">hjem</NavLink>
+          <NavLink href="mat-og-vin">Mat & Vin</NavLink>
+          <NavLink href="/">Arrangement</NavLink>
+          <NavLink href="sommerfest-i-hvaler">Festival</NavLink>
+          <NavLink href="overnatting">Overnatting</NavLink>
+          <div className="ml-32">
+            <PrimaryButtonHref text="Kontakt oss" href="kontakt-oss" />
+          </div>
         </div>
       </div>
     </Layout>

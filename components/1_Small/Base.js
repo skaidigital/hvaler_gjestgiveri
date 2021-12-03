@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Footer } from "../2_Big/Navigation/Footer";
+import { Navbar } from "../2_Big/Navigation/Navbar";
 
 // TODO: Add the path for the cloudinary account for this project
 const myLoader = ({ src, width, quality }) => {
@@ -34,10 +36,7 @@ export const Section = ({ children, id, farge, pt }) => {
 };
 export const SectionNav = ({ children, id, c }) => {
   return (
-    <section
-      id={id}
-      className={`${c} mx-auto align-center py-32 md:py-56 lg:py-96`}
-    >
+    <section id={id} className={`${c} mx-auto align-center py-32 md:py-56 lg:py-96`}>
       {children}
     </section>
   );
@@ -106,11 +105,11 @@ export const HeroContainerUtenPadding = ({ children, id, farge, pt }) => {
 
 export const Layout = ({ children, c }) => {
   return (
-    <div
-      className={`container mx-auto w-screen md:max-w lg:max-w xl:max-w ${c}`}
-    >
-      <div className="max-w-95 mx-auto align-center">{children}</div>
-    </div>
+    <>
+      <div className={`container mx-auto w-screen md:max-w lg:max-w xl:max-w ${c}`}>
+        <div className="max-w-95 mx-auto align-center">{children}</div>
+      </div>
+    </>
   );
 };
 //
