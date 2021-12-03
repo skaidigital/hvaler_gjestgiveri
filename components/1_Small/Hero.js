@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { FourEightEight, FourEightSix, Grid, Layout } from "./Base";
+import { ImageContentful } from "./ImageContentful";
 
 export const Hero = ({ imageSource, imageAlt, SEOHeading, heading, children, loader }) => {
   return (
     <section id="hero" className="z-1 mx-auto lg:h-480 relative flex items-center">
-      <Image
-        src={imageSource}
+      <ImageContentful
+        src={imageSource.slice(42)}
         alt={imageAlt}
         layout="fill"
         className="object-cover object-top dimmer-50"
         priority
-        loader={loader}
       />
       <Layout>
         <Grid>

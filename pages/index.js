@@ -51,14 +51,14 @@ export default function Home({ content, nap }) {
       <Hero
         SEOHeading={content.seoTittel}
         heading={content.hovedtittel}
-        imageSource={content.bildeMat.url.slice(42)}
+        imageSource={content.bildeMat.url}
         imageAlt="alt"
         loader={image_loader}
       />
       <SocialProofBanner />
       <Layout>
         <Grid c="gap-y-56 md:gap-y-96 lg:gap-y-160">
-          <FourEightSix>
+          <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelMat} heading={content.tittelMat}>
               {documentToReactComponents(content.brdtekstMat.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
@@ -67,7 +67,7 @@ export default function Home({ content, nap }) {
           <FourEightSix c="grid justify-items-stretch relative">
             <Image
               loader={image_loader}
-              src={`${content.bildeMat.url.slice(42)}`}
+              src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
               layout="fill"
               className="object-cover"
@@ -77,20 +77,20 @@ export default function Home({ content, nap }) {
           <FourEightSix c="grid justify-items-stretch relative">
             <Image
               loader={image_loader}
-              src={`${content.bildeMat.url.slice(42)}`}
+              src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
               layout="fill"
               className="object-cover"
             />
           </FourEightSix>
-          <FourEightSix c="lg:col-start-7">
+          <FourEightSix c="lg:col-start-7 lg:pl-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelOvernatting} heading={content.tittelOvernatting}>
               {documentToReactComponents(content.innholdOvernatting.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
 
-          <FourEightSix>
+          <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelBryllup} heading={content.tittelBryllup}>
               {documentToReactComponents(content.innholdBryllup.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
@@ -99,7 +99,7 @@ export default function Home({ content, nap }) {
           <FourEightSix c="grid justify-items-stretch relative">
             <Image
               loader={image_loader}
-              src={`${content.bildeMat.url.slice(42)}`}
+              src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
               layout="fill"
               className="object-cover"
@@ -109,20 +109,20 @@ export default function Home({ content, nap }) {
           <FourEightSix c="grid justify-items-stretch relative">
             <Image
               loader={image_loader}
-              src={`${content.bildeMat.url.slice(42)}`}
+              src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
               layout="fill"
               className="object-cover"
             />
           </FourEightSix>
-          <FourEightSix c="lg:col-start-7">
+          <FourEightSix c="lg:col-start-7 lg:pl-24">
             <HorizontalCardCTA SEOHeading={content.seoKursOgKonferanser} heading={content.tittelKursOgKonferanser}>
               {documentToReactComponents(content.innholdKursOgKonferanser.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
 
-          <FourEightSix>
+          <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoSelskap} heading={content.tittelSelskap}>
               {documentToReactComponents(content.innholdSelskap.json, options)}
               <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
@@ -131,7 +131,7 @@ export default function Home({ content, nap }) {
           <FourEightSix c="grid justify-items-stretch relative">
             <Image
               loader={image_loader}
-              src={`${content.bildeMat.url.slice(42)}`}
+              src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
               layout="fill"
               className="object-cover"
