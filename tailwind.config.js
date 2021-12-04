@@ -47,6 +47,9 @@ module.exports = {
       black: "#000000",
       black_87: "#1E1E1E",
       grey: "#F5F5F5",
+      sommerfest_primary: "#044463",
+      sommerfest_secondary: "#0D6684",
+      sommerfest_CTA: "#D7507B",
       danger_50: "#FEF2F2",
       danger_300: "#93C%FD",
       danger_500: "#EF4444",
@@ -156,6 +159,8 @@ module.exports = {
       640: "640px",
       800: "800px",
       960: "960px",
+      1280: "1280px",
+      1600: "1600px",
       auto: "auto",
     },
     minHeight: {
@@ -205,6 +210,8 @@ module.exports = {
       640: "640px",
       800: "800px",
       960: "960px",
+      1280: "1280px",
+      1600: "1600px",
       auto: "auto",
     },
     maxWidth: {
@@ -240,6 +247,7 @@ module.exports = {
       center: true,
     },
     zIndex: {
+      "-1": -1,
       0: "0",
       1: "1",
       2: "2",

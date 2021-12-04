@@ -25,9 +25,8 @@
   --tw-rotate: 0;
   --tw-skew-x: 0;
   --tw-skew-y: 0;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-scale-x: 0.75;
   --tw-scale-y: 0.75;
   --tw-translate-y: -1.5rem;
@@ -173,4 +172,14 @@
 .animateUnderline:hover {
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 2px;
+}
+
+.sommerfest-gradient {
+  background: linear-gradient(270deg, #0d6684 -0.08%, #d7507b 97.51%);
+}
+
+.half-circle {
+  border-top-left-radius: 1280px;
+  border-bottom-left-radius: 1280px;
+  /* border-top-bottom-radius: 1600px; */
 }

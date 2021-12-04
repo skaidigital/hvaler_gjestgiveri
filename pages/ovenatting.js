@@ -1,12 +1,12 @@
 import { fetchContent } from "../components/1_Small/contentfulFetch";
 import { CategoryPageTemplate } from "../components/2_Big/CategoryPageTemplate";
 
-export default function bryllup({ content }) {
+export default function overnatting({ content }) {
   return <CategoryPageTemplate content={content} />;
 }
 
 export async function getStaticProps() {
-  const id = "cGCui0u5BZM8jpR3TIAv1";
+  const id = "2xDtWNFeZ6hS842oYGfSJX";
   const response = await fetchContent(`
   {
     hero(id: "${id}"){

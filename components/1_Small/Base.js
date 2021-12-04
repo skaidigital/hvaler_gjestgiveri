@@ -147,9 +147,33 @@ export const OneOneOne = ({ c, children, id }) => {
   );
 };
 
+export const TwoTwoFour = ({ c, children, id }) => {
+  return (
+    <div key={id} className={`${c} col-span-2 lg:col-span-4`}>
+      {children}
+    </div>
+  );
+};
+
 export const TwoFourTwo = ({ c, children, id }) => {
   return (
     <div key={id} className={`${c} col-span-2 md:col-span-4 lg:col-span-2`}>
+      {children}
+    </div>
+  );
+};
+
+export const TwoFourFour = ({ c, children, id }) => {
+  return (
+    <div key={id} className={`${c} col-span-2 md:col-span-4`}>
+      {children}
+    </div>
+  );
+};
+
+export const TwoFourEight = ({ c, children, id }) => {
+  return (
+    <div key={id} className={`${c} col-span-2 md:col-span-4 lg:col-span-8`}>
       {children}
     </div>
   );
