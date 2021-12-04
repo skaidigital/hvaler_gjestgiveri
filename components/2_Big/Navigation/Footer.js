@@ -44,6 +44,8 @@ export const Footer = () => {
             <span className="mx-8">|</span>
           </a>
           <a className="text-white underline">Personvern</a>
+          <span className="mx-8">|</span>
+          <a className="text-white underline">Sitemap</a>
         </div>
       </Layout>
     </footer>

@@ -6,7 +6,7 @@ import { NavLink } from "../../1_Small/NavLink";
 export const Desktopnav = () => {
   return (
     <Layout>
-      <div className="flex justify-between bg-white my-24">
+      <div className="flex justify-between my-24">
         <div className="self-center ">
           <Link href="/">
             <a>

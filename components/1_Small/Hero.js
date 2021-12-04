@@ -4,9 +4,9 @@ import { ImageContentful } from "./ImageContentful";
 
 export const Hero = ({ imageSource, imageAlt, SEOHeading, heading, children, loader }) => {
   return (
-    <section id="hero" className="z-1 mx-auto lg:h-480 relative flex items-center">
+    <section id="hero" className="z-1 mx-auto h-400 lg:h-480 relative flex items-center">
       <ImageContentful
-        src={imageSource.slice(42)}
+        src={imageSource}
         alt={imageAlt}
         layout="fill"
         className="object-cover object-top dimmer-50"

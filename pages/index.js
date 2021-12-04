@@ -13,6 +13,7 @@ import { Hero } from "../components/1_Small/Hero";
 import { SocialProofBanner } from "../components/1_Small/SocialProofBanner";
 import { InfoNAPSection } from "../components/1_Small/InfoNAPSection";
 import { InfoBanner } from "../components/1_Small/InfoBanner";
+import { ImageContentful } from "../components/1_Small/ImageContentful";
 
 export default function Home({ content, nap }) {
   !content && RedirectPage();
@@ -65,7 +66,7 @@ export default function Home({ content, nap }) {
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
-            <Image
+            <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
@@ -75,7 +76,7 @@ export default function Home({ content, nap }) {
           </FourEightSix>
 
           <FourEightSix c="grid justify-items-stretch relative">
-            <Image
+            <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
@@ -97,7 +98,7 @@ export default function Home({ content, nap }) {
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
-            <Image
+            <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
@@ -107,7 +108,7 @@ export default function Home({ content, nap }) {
           </FourEightSix>
 
           <FourEightSix c="grid justify-items-stretch relative">
-            <Image
+            <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
@@ -129,7 +130,7 @@ export default function Home({ content, nap }) {
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
-            <Image
+            <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
               alt={content.bildeMat.description}
