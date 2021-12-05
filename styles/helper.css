@@ -184,6 +184,12 @@
   /* border-top-bottom-radius: 1600px; */
 }
 
+.half-circle-left {
+  border-top-right-radius: 1280px;
+  border-bottom-right-radius: 1280px;
+  /* border-top-bottom-radius: 1600px; */
+}
+
 .nav-hover {
   position: relative;
 }

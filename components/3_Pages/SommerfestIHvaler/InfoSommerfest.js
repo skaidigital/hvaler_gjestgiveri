@@ -14,7 +14,7 @@ export const InfoSommerfest = ({
   info_image_height,
 }) => {
   return (
-    <section id="konsertpakker" className="bg-sommerfest_secondary  py-56 md:py-96 lg:py-160">
+    <section id="konsertpakker" className="bg-sommerfest_secondary  py-56 md:py-96 lg:py-160 z-1">
       <Layout>
         <Grid>
           <FourEightFive c="lg:col-start-2 lg:pr-24 grid justify-items-stretch  z-2">

@@ -10,7 +10,7 @@ export const SommerfestIHvaler = ({ content }) => {
   return (
     <div className="relative">
       <div className="relative">
-        <div className="w-400  h-400 lg:w-640 lg:h-1280 inline-block half-circle mt-320 lg:mt-80 sommerfest-gradient absolute z-1 right-0"></div>
+        <div className="w-240 h-480 md:w-400 md:h-800  inline-block half-circle mt-240 md:mt-160 lg:mt-80 sommerfest-gradient absolute z-1 right-0"></div>
         <HeroSommerfest
           hero_seo_heading={content.seoHeading}
           hero_heading={content.hovedtittel}
@@ -20,6 +20,7 @@ export const SommerfestIHvaler = ({ content }) => {
           hero_image_width={content.tittelbilde.width}
           hero_image_height={content.tittelbilde.height}
         />
+        <div className="w-240 h-480 md:w-400 md:h-800 lg:w-640 lg:h-1280 inline-block half-circle-left mt-560 md:mt-360 lg:mt-240 sommerfest-gradient absolute z-0 left-0"></div>
         <InfoSommerfest
           info_heading={content.tittelKonsertpakke}
           info_content={content.konsertpakkeInnhold.json}

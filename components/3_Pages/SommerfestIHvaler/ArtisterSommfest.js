@@ -31,10 +31,10 @@ export const ArtisterSommfest = ({ artist_info, artist_images, artist_names }) =
   };
 
   return (
-    <section id="artister" className="bg-sommerfest_primary  py-56 md:py-96 lg:py-160">
+    <section id="artister" className="bg-sommerfest_primary  py-56 md:py-96 lg:py-160 z-1">
       <Layout>
         <Grid>
-          <FourEightEight c="lg:col-start-3">
+          <FourEightEight c="lg:col-start-3 z-1">
             <SubGrid24 c="grid-cols-2 md:grid-cols-4 lg:grid-cols-8 text-white">
               <TwoFourEight>
                 <h2 className="text-white">Årets artister</h2>
