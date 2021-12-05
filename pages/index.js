@@ -62,7 +62,7 @@ export default function Home({ content, nap }) {
           <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelMat} heading={content.tittelMat}>
               {documentToReactComponents(content.brdtekstMat.json, options)}
-              <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
+              <PrimaryButtonHref href="mat-og-vin" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
@@ -87,14 +87,14 @@ export default function Home({ content, nap }) {
           <FourEightSix c="lg:col-start-7 lg:pl-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelOvernatting} heading={content.tittelOvernatting}>
               {documentToReactComponents(content.innholdOvernatting.json, options)}
-              <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
+              <PrimaryButtonHref href="overnatting" text="Se overnattingsmulighetene på Hvaler Gjestgiveri" />
             </HorizontalCardCTA>
           </FourEightSix>
 
           <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoTittelBryllup} heading={content.tittelBryllup}>
               {documentToReactComponents(content.innholdBryllup.json, options)}
-              <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
+              <PrimaryButtonHref href="bryllup" text="Les om muligheter for bryllup på Hvaler" />
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
@@ -119,14 +119,14 @@ export default function Home({ content, nap }) {
           <FourEightSix c="lg:col-start-7 lg:pl-24">
             <HorizontalCardCTA SEOHeading={content.seoKursOgKonferanser} heading={content.tittelKursOgKonferanser}>
               {documentToReactComponents(content.innholdKursOgKonferanser.json, options)}
-              <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
+              <PrimaryButtonHref href="kurs-og-konferanser" text="Kurs- og konferansemuligheter" />
             </HorizontalCardCTA>
           </FourEightSix>
 
           <FourEightSix c="pr-24">
             <HorizontalCardCTA SEOHeading={content.seoSelskap} heading={content.tittelSelskap}>
               {documentToReactComponents(content.innholdSelskap.json, options)}
-              <PrimaryButtonHref href="mat-og-og" text="Les mer om restauranten" />
+              <PrimaryButtonHref href="selskap" text="Les om selskap på Hvaler Gjestgiveri" />
             </HorizontalCardCTA>
           </FourEightSix>
           <FourEightSix c="grid justify-items-stretch relative">
