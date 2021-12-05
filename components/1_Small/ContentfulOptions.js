@@ -3,10 +3,12 @@ import Link from "next/link";
 
 export const options = {
   renderNode: {
-    [BLOCKS.HEADING_1]: (node, children) => <h1 className="text-h2 lg:text-big font-semibold mb-8">{children}</h1>,
+    [BLOCKS.HEADING_1]: (node, children) => (
+      <h1 className="text-h2 lg:text-h1 font-bold text-black_87 mb-8">{children}</h1>
+    ),
     // Akkurat nå er det h2 som regulerer spacing mellom avsnittene/seksjonene
     [BLOCKS.HEADING_2]: (node, children) => (
-      <h2 className="ext-h3 lg:text-h1 font-semibold mb-8 mt-80 lg:mt-140" id={children}>
+      <h2 className="text-h3 lg:text-h2 font-semibold mb-8 mt-80 text-black_87 lg:mt-140" id={children}>
         {children}
       </h2>
     ),

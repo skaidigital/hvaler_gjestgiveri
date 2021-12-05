@@ -24,15 +24,15 @@ export const Footer = () => {
             </FourFourThree>
             <FourFourFour c="mb-24 md:mb-56 lg:mb-0">
               <FooterHeading>Epost</FooterHeading>
-              <a className="text-white underline" target="blank" href="mailto:mail@gmail.com">
-                mail@mailersen.com
+              <a className="text-white underline" target="blank" href="mailto:post@hvalergjestegiveri.no">
+                post@hvalergjestegiveri.no
               </a>
               <FooterHeading>Telefonnummer</FooterHeading>
-              <a className="text-white underline" target="blank" href="tel:2193012">
-                21389210
+              <a className="text-white underline" target="blank" href="tel:69378200">
+                69 37 82 00
               </a>
               <FooterHeading>Adresse</FooterHeading>
-              Adresse adressesen
+              Vestre veien 132, 1680 Skjærhalden
             </FourFourFour>
           </Grid>
         </Layout>
