@@ -6,7 +6,8 @@ import { CategoryPageImageGallery } from "../1_Small/CategoryPageImageGallery";
 import { Footer } from "./Navigation/Footer";
 import { Navbar } from "./Navigation/Navbar";
 import { CategoryPageQuote } from "../1_Small/CategoryPageQuote";
-export const CategoryPageTemplate = ({ content }) => {
+import { Menu } from "../1_Small/Menu";
+export const CategoryPageTemplate = ({ content, meny }) => {
   return (
     <>
       <Navbar />
@@ -20,6 +21,14 @@ export const CategoryPageTemplate = ({ content }) => {
       </Hero>
       <CategoryPageContentContainer>
         {documentToReactComponents(content.innhold.json, options)}
+        {meny && (
+          <Menu
+            price_three_course_food={meny.pris3RettersMat}
+            price_five_course_food={meny.pris5RettersMat}
+            price_three_course_wine={meny.pris3RettersVinmeny}
+            price_five_course_wine={meny.pris5RettersVinmeny}
+          />
+        )}
       </CategoryPageContentContainer>
       <CategoryPageImageGallery
         heading={content.bildegalleritittel}
@@ -36,7 +45,7 @@ export const CategoryPageTemplate = ({ content }) => {
         width4={content.bildegalleriCollection.items[3].width}
         height4={content.bildegalleriCollection.items[3].height}
       />
-      <CategoryPageQuote quote={content.sitatTekst} author={content.sitatnavn} />
+      {content.sitatTekst && <CategoryPageQuote quote={content.sitatTekst} author={content.sitatnavn} />}
       <Footer />
     </>
   );
