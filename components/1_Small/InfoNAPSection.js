@@ -5,7 +5,7 @@ import { CardContainer } from "./CardContainer";
 export const InfoNAPSection = ({ email, phone_number, adress }) => {
   return (
     <>
-      <FourEightFive c="lg:mb-160">
+      <FourEightFive c="lg:mb-160 flex flex-col justify-center">
         <h2 className="mb-16">Kom og besøk oss!</h2>
         <div className="flex flex-col mb-16">
           <span className="font-semibold">Epost</span>
@@ -26,7 +26,7 @@ export const InfoNAPSection = ({ email, phone_number, adress }) => {
           <span>{adress}</span>
         </div>
       </FourEightFive>
-      <FourEightSix c="">
+      <FourEightSix c="lg:col-start-7">
         <GoogleMapsEmbedded c="h-240 md:h-400" />
       </FourEightSix>
     </>

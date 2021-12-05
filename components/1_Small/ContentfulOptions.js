@@ -46,3 +46,16 @@ export const options_sommerfest = {
     ),
   },
 };
+
+export const options_info_fane = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <p className="text-white text-body_medium">{children}</p>,
+    [INLINES.HYPERLINK]: ({ data }, children) => (
+      <Link href={`${data.uri}`}>
+        <a target="blank" className="text-white text-body_medium underline">
+          {children}
+        </a>
+      </Link>
+    ),
+  },
+};

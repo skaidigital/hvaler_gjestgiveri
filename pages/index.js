@@ -8,7 +8,7 @@ import { useRouter } from "next/dist/client/router";
 import { fetchContent } from "../components/1_Small/contentfulFetch";
 import { HorizontalCardCTA } from "../components/1_Small/HorizontalCardCTA";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { options } from "../components/1_Small/ContentfulOptions";
+import { options, options_info_fane } from "../components/1_Small/ContentfulOptions";
 import { Hero } from "../components/1_Small/Hero";
 import { SocialProofBanner } from "../components/1_Small/SocialProofBanner";
 import { InfoNAPSection } from "../components/1_Small/InfoNAPSection";
@@ -47,7 +47,7 @@ export default function Home({ content, nap }) {
           cardType: "summary_large_image",
         }}
       />
-      <InfoBanner banner_message="Dette er en melding vi vil at folk skal se" />
+      <InfoBanner banner_message={documentToReactComponents(content.informasjonsfane.json, options_info_fane)} />
       <Navbar />
       <Hero
         SEOHeading={content.seoTittel}
@@ -161,6 +161,9 @@ export async function getStaticProps() {
   {
     forsideCollection{
       items{
+        informasjonsfane{
+          json
+        }
         hovedtittel
         seoTittel
         seoTittelMat
