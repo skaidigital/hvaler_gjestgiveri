@@ -39,13 +39,13 @@ export const Footer = () => {
       </SectionNav>
       <Layout>
         <div className="py-8 flex">
-          <a href="https://skaidigital.no/" className="text-white underline border-r-1 border-white">
+          <a href="https://skaidigital.no/" className="text-white underline border-r-1 border-white" target="blank">
             Nettside utviklet av Skai Digital
             <span className="mx-8">|</span>
           </a>
-          <a className="text-white underline">Personvern</a>
+          <FooterLink href="/personvern">Personvern</FooterLink>
           <span className="mx-8">|</span>
-          <a className="text-white underline">Sitemap</a>
+          <FooterLink href="/sitemap.xml">Sitemap</FooterLink>
         </div>
       </Layout>
     </footer>
