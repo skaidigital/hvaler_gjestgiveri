@@ -183,3 +183,33 @@
   border-bottom-left-radius: 1280px;
   /* border-top-bottom-radius: 1600px; */
 }
+
+.nav-hover {
+  position: relative;
+}
+
+.nav-hover:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #334155;
+  height: 2px;
+}
+.nav-hover:hover:after {
+  width: 100%;
+}
+
+.nav-hover,
+.nav-hover:after,
+.nav-hover:before {
+  transition: ease-out 0.2s;
+}
+
+.nav-hover:hover {
+  color: #23425f;
+}

@@ -1,9 +1,46 @@
 import Link from "next/link";
+import { useRef, useState } from "react";
 import { Layout } from "../../1_Small/Base";
 import { PrimaryButtonHref } from "../../1_Small/Buttons";
 import { NavLink } from "../../1_Small/NavLink";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
+import { DropdownArrangement } from "./DropdownArrangement";
 
 export const Desktopnav = () => {
+  const dropdownRef = useRef();
+  const [openDropdownArrangement, setOpenDropdownArrangement] = useState(false);
+
+  const toggleDropdownArrangement = () => {
+    setOpenDropdownArrangement(!openDropdownArrangement);
+  };
+
+  useOnClickOutside(dropdownRef, () => setOpenDropdownArrangement(false));
+
+  const ArrangementDropdownOpen = () => {
+    return (
+      <div className="absolute ml-24 mt-40 z-300" ref={dropdownRef}>
+        <DropdownArrangement />
+      </div>
+    );
+  };
+
+  const chevron = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`${openDropdownArrangement && "rotate-180"} feather mt-2 feather-chevron-down `}
+    >
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  );
+
   return (
     <Layout>
       <div className="flex justify-between my-24">
@@ -17,7 +54,17 @@ export const Desktopnav = () => {
         <div className="flex items-center">
           <NavLink href="/">hjem</NavLink>
           <NavLink href="mat-og-vin">Mat & Vin</NavLink>
-          <NavLink href="/">Arrangement</NavLink>
+          <div className="flex flex-col ">
+            <button
+              className="ml-24 nav-hover text-neutral_700 flex items-center"
+              type="button"
+              onClick={toggleDropdownArrangement}
+            >
+              Arrangement <span className="ml-4">{chevron}</span>
+            </button>
+            {openDropdownArrangement && <ArrangementDropdownOpen />}
+          </div>
+
           <NavLink href="sommerfest-i-hvaler">Festival</NavLink>
           <NavLink href="overnatting">Overnatting</NavLink>
           <div className="ml-32">
