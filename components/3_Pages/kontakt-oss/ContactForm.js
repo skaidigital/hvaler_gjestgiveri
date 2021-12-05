@@ -168,6 +168,25 @@ export const ContactForm = () => {
           <div className="h-18 mb-16" />
         </FourFourFour>
         <FourEightEight c="lg:col-start-3">
+          <div className="flex flex-col flex-1 mb-32 bg-white">
+            <label
+              htmlFor="message"
+              className={`flex flex-col text-body_small font-semibold text-secondary_700 border-1 border-neutral_100 p-8 rounded-4 focus-within:border-primary_700 `}
+            >
+              <div className="flex items-center">
+                {/* <span className="mr-8">{person}</span> */}
+                Skrive en melding?{" "}
+                <span className="py-4 px-8 text-body_small bg-neutral_300 rounded-rund ml-4 text-black">Valgfritt</span>
+              </div>
+              <input
+                name="message"
+                {...register("message")}
+                className="text-body_regular font-medium  outline-none text-neutral_300 focus:text-neutral_700"
+              />
+            </label>
+          </div>
+        </FourEightEight>
+        <FourEightEight c="lg:col-start-3">
           <label htmlFor="consent">
             <input
               name="consent"
