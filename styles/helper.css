@@ -213,3 +213,16 @@
 .nav-hover:hover {
   color: #23425f;
 }
+
+.nav-current-page:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  content: "";
+  color: black;
+  background: #334155;
+  height: 2px;
+}
