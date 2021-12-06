@@ -58,14 +58,14 @@ export default function Home({ content, nap }) {
       />
       <SocialProofBanner />
       <Layout>
-        <Grid c="gap-y-56 md:gap-y-96 lg:gap-y-160">
-          <FourEightSix c="pr-24">
+        <Grid c="lg:gap-y-160">
+          <FourEightSix c="lg:pr-24 mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoTittelMat} heading={content.tittelMat}>
               {documentToReactComponents(content.brdtekstMat.json, options)}
               <PrimaryButtonHref href="mat-og-vin" text="Les mer om restauranten" />
             </HorizontalCardCTA>
           </FourEightSix>
-          <FourEightSix c="grid justify-items-stretch relative">
+          <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto row-start-1 lg:row-start-auto">
             <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
@@ -75,7 +75,7 @@ export default function Home({ content, nap }) {
             />
           </FourEightSix>
 
-          <FourEightSix c="grid justify-items-stretch relative">
+          <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto ">
             <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
@@ -84,20 +84,20 @@ export default function Home({ content, nap }) {
               className="object-cover"
             />
           </FourEightSix>
-          <FourEightSix c="lg:col-start-7 lg:pl-24">
+          <FourEightSix c="lg:col-start-7 lg:pl-24 mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoTittelOvernatting} heading={content.tittelOvernatting}>
               {documentToReactComponents(content.innholdOvernatting.json, options)}
               <PrimaryButtonHref href="overnatting" text="Se overnattingsmulighetene på Hvaler Gjestgiveri" />
             </HorizontalCardCTA>
           </FourEightSix>
 
-          <FourEightSix c="pr-24">
+          <FourEightSix c="lg:pr-24 mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoTittelBryllup} heading={content.tittelBryllup}>
               {documentToReactComponents(content.innholdBryllup.json, options)}
               <PrimaryButtonHref href="bryllup" text="Les om muligheter for bryllup på Hvaler" />
             </HorizontalCardCTA>
           </FourEightSix>
-          <FourEightSix c="grid justify-items-stretch relative">
+          <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto row-start-5 lg:row-start-auto">
             <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
@@ -107,7 +107,7 @@ export default function Home({ content, nap }) {
             />
           </FourEightSix>
 
-          <FourEightSix c="grid justify-items-stretch relative">
+          <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto ">
             <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
@@ -116,20 +116,22 @@ export default function Home({ content, nap }) {
               className="object-cover"
             />
           </FourEightSix>
-          <FourEightSix c="lg:col-start-7 lg:pl-24">
+          <FourEightSix c="lg:col-start-7 lg:pl-24 mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoKursOgKonferanser} heading={content.tittelKursOgKonferanser}>
               {documentToReactComponents(content.innholdKursOgKonferanser.json, options)}
               <PrimaryButtonHref href="kurs-og-konferanser" text="Kurs- og konferansemuligheter" />
             </HorizontalCardCTA>
           </FourEightSix>
-
-          <FourEightSix c="pr-24">
+        </Grid>
+        <div className="mb-56 md:mb-96 lg:mb-160" />
+        <Grid c="gap-y-56 md:gap-y-96 lg:gap-y-160">
+          <FourEightSix c="lg:pr-24 row-start-2 lg:row-start-auto mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoSelskap} heading={content.tittelSelskap}>
               {documentToReactComponents(content.innholdSelskap.json, options)}
               <PrimaryButtonHref href="selskap" text="Les om selskap på Hvaler Gjestgiveri" />
             </HorizontalCardCTA>
           </FourEightSix>
-          <FourEightSix c="grid justify-items-stretch relative">
+          <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto">
             <ImageContentful
               loader={image_loader}
               src={`${content.bildeMat.url}`}
