@@ -4,7 +4,7 @@ export const SocialProofBanner = () => {
   return (
     <section id="social-proof" className="bg-secondary_700 py-8 md:py-16 mb-56 lg:mb-96">
       <Layout>
-        <div className="flex flex-col md:flex-row justify-between md:items-center text-white">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between md:justify-center lg:items-center text-white my-8">
           <TripadvisorRating />
           <GoogleRating />
           <FacebookRating />
@@ -14,18 +14,9 @@ export const SocialProofBanner = () => {
   );
 };
 
-const IconRatingGroup = ({ icon, rating_number, rating_icon }) => {
-  return (
-    <div className="flex">
-      {icon} <span className="mx-8">{rating_number}</span>
-      {rating_icon}
-    </div>
-  );
-};
-
 const FacebookRating = () => {
   return (
-    <div className="flex items-center text-white">
+    <div className="flex items-center text-white md:mt-16 lg:mt-0">
       {facebook_logo} <span className="mx-8">{star}</span>{" "}
       <span className="font-semibold text-body_large text-white">5 av 5</span>
     </div>
@@ -34,7 +25,7 @@ const FacebookRating = () => {
 
 const GoogleRating = () => {
   return (
-    <div className="flex items-center text-white">
+    <div className="flex items-center md:ml-32 text-white my-16 md:my-0">
       {google_logo}
       <span className="mx-8 font-semibold text-body_large text-white">4.6</span>
       {google_rating_svg}
