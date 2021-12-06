@@ -27,7 +27,7 @@ export const InfoSommerfest = ({
               className="object-cover"
             />
           </FourEightFive>
-          <FourEightFive c=" z-2">
+          <FourEightFive c="mt-24 lg:mt-0 z-2">
             <h2 className="text-white text-h3 lg:text-h2 mb-8 lg:mb-16">{info_heading}</h2>
             {documentToReactComponents(info_content, options_sommerfest)}
             <Link href="" className="">

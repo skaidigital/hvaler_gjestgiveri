@@ -10,7 +10,7 @@ export const OmVertskapet = ({ content, image }) => {
         <h2>Om vertskapet</h2>
         {documentToReactComponents(content.json, options)}
       </FourEightSix>
-      <FourEightSix c="relative h-240 md:h-400">
+      <FourEightSix c="relative h-240 md:h-400 row-start-1 lg:row-start-auto">
         <ImageContentful src={image.url} alt={image.alt} layout="fill" className="object-cover" />
       </FourEightSix>
     </>

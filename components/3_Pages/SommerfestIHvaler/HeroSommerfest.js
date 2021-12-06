@@ -19,7 +19,7 @@ export const HeroSommerfest = ({
       <section id="hero" className="bg-sommerfest_primary  py-56 md:py-96 lg:py-160 ">
         <Layout>
           <Grid>
-            <FourEightFive c="lg:col-start-2 lg:pr-24 z-2">
+            <FourEightFive c="lg:col-start-2 lg:pr-24 md:mb-32 lg:mb-0 mb-16 z-2">
               <h1 className="text-white text-body_medium tracking-widest font-medium">{hero_seo_heading}</h1>
               <h2 className="text-white text-h2 lg:text-h1 mb-8 lg:mb-16">{hero_heading}</h2>
               <p className="text-neutral_300">{hero_body_text}</p>

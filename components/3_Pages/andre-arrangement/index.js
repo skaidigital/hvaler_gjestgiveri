@@ -20,8 +20,10 @@ export const AndreArrangement = ({ arrangement, content }) => {
         {documentToReactComponents(content.tittelbrdtekst.json, options_sommerfest)}
       </Hero>
       <Layout>
-        <Grid c="gap-y-16 lg:gap-y-56">
+        <Grid c="">
           <MapArrangement arrangement={arrangement} />
+        </Grid>
+        <Grid c="gap-y-16 lg:gap-y-56">
           <OmVertskapet content={content.omVertskapetBrdtekst} image={content.omVertskapetBilde} />
           <div className="mb-56 md:mb-96 lg:mb-160" />
         </Grid>

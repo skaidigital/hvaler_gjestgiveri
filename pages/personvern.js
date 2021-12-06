@@ -12,6 +12,8 @@ export default function personvern({ content }) {
         <Grid>
           <FourEightEight c="lg:col-start-3 mt-24 lg:mt-32">
             {documentToReactComponents(content.innhold.json, options)}
+
+            
           </FourEightEight>
         </Grid>
       </Layout>

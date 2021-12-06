@@ -1,78 +1,96 @@
 import Hamburger from "hamburger-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Layout } from "../../1_Small/Base";
+import { MobileNavButton } from "../../1_Small/MobileNavButton";
+import { MobileNavLink } from "../../1_Small/MobileNavLink";
+import { MobileNavArrangement } from "./MobileNavArrangement";
 
 export const Mobilenav = () => {
   const [showMobilenav, setShowMobilenav] = useState(false);
-  const openMobilenav = () => {
-    setShowMobilenav((prev) => !prev);
+  const [openArrangement, setOpenArrangement] = useState(false);
+  const [showMainOptions, setShowMainOptions] = useState(false);
+
+  const showArrangement = () => {
+    setShowMainOptions(false);
+    setOpenArrangement(true);
   };
-  const storeNameOrLogo = "Okstind";
+
+  const previousScreenHandler = () => {
+    setOpenArrangement(false);
+    setShowMainOptions(true);
+  };
+
+  const openFirstScreen = () => {
+    setShowMobilenav(() => !showMobilenav);
+    setShowMainOptions(() => !showMainOptions);
+  };
+
+  useEffect(() => {
+    return () => {
+      setShowMobilenav(!showMobilenav);
+    };
+  }, [showMobilenav]);
+
+  const OpenMobileNav = () => {
+    return (
+      <>
+        <div className="flex flex-col mb-56">
+          <MobileNavLink href="/">Hjem</MobileNavLink>
+          <MobileNavLink href="/mat-og-vin">Mat & Vin</MobileNavLink>
+          <MobileNavButton onClick={showArrangement}>
+            <div className="flex justify-between w-100 items-center">
+              Arrangement <span className="">{chevron}</span>
+            </div>
+          </MobileNavButton>
+          <MobileNavLink href="/overnatting">Overnatting</MobileNavLink>
+          <MobileNavLink href="/kontakt-oss">Kontakt oss</MobileNavLink>
+        </div>
+      </>
+    );
+  };
+
+  const storeNameOrLogo = "Hvaler Gjestgiveri";
 
   return (
     <>
-      {showMobilenav ? (
-        <>
-          <Layout>
-            <div className="py-24 bg-light pb-56 ">
-              <header className="flex justify-between text-lys  ">
-                <div>
-                  <Link href="/">
-                    <a>
-                      <p className="text-h3 font-semibold flex mb-0 self-center">{storeNameOrLogo}</p>
-                    </a>
-                  </Link>
-                </div>
-                <div className="strek" onClick={() => setShowMobilenav(!showMobilenav)}>
-                  <Hamburger
-                    toggled={showMobilenav}
-                    toggle={setShowMobilenav}
-                    easing="ease-in"
-                    rounded
-                    label="Vis meny"
-                    hideOutline={false}
-                  />
-                </div>
-              </header>
-              <ul className="mt-56">
-                <Link href="/">
-                  <li className="text-h1 font-semibold text-dark mt-16">Hjem</li>
-                </Link>
-                <Link href="/meny">
-                  <li className="text-h1 font-semibold text-dark mt-16">Menyen</li>
-                </Link>
-                <Link href="/om-oss">
-                  <li className="text-h1 font-semibold text-dark mt-16">Om oss</li>
-                </Link>
-                <Link href="/Kontakt">
-                  <li className="text-h1 font-semibold text-dark mt-16">Kontakt</li>
-                </Link>
-                <Link href="#bookBord">
-                  <li className="text-h1 font-semibold text-dark mt-16">Book et bord</li>
-                </Link>
-              </ul>
-            </div>
-          </Layout>
-        </>
-      ) : (
-        <Layout>
-          <div className="flex justify-between py-24">
-            <p className="text-h3 font-semibold flex mb-0 self-center">{storeNameOrLogo}</p>
+      <Layout>
+        <div className="flex justify-between py-24">
+          <Link href="/">
+            <a className="text-h3 font-semibold flex mb-0 self-center">{storeNameOrLogo}</a>
+          </Link>
 
-            <div className="strek flex self-center" onClick={() => setShowMobilenav(!showMobilenav)}>
-              <Hamburger
-                toggled={showMobilenav}
-                toggle={setShowMobilenav}
-                easing="ease-in"
-                rounded
-                label="Vis meny"
-                hideOutline={false}
-              />
-            </div>
+          <div className="strek flex self-center" onClick={openFirstScreen}>
+            <Hamburger
+              toggled={showMobilenav}
+              toggle={setShowMobilenav}
+              easing="ease"
+              rounded
+              label="Vis meny"
+              hideOutline={false}
+            />
           </div>
-        </Layout>
-      )}
+        </div>
+        {openArrangement && <MobileNavArrangement onClick={previousScreenHandler} />}
+        {showMainOptions && <OpenMobileNav />}
+      </Layout>
     </>
   );
 };
+
+const chevron = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#23425F"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="feather feather-chevron-down rotate-90"
+  >
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+);

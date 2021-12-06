@@ -23,9 +23,8 @@ export const Footer = () => {
               </div>
             </TwoFourTwo>
             <TwoFourTwo>
-              <FooterHeading>Navigasjon</FooterHeading>
+              <FooterHeading>Arrangement</FooterHeading>
               <div className="flex flex-col">
-                <FooterLink href="/">Arrangement</FooterLink>
                 <FooterLink href="/bryllup">Bryllup</FooterLink>
                 <FooterLink href="/kurs-og-konferanser">Kurs & Konferanser</FooterLink>
                 <FooterLink href="/selskap">Selskap</FooterLink>
