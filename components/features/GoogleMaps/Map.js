@@ -14,11 +14,7 @@ export const Map = ({ zoomLevel }) => {
     <div className="">
       <h2>Come visist us at our campus</h2>
       <div className="w-100 h-400 my-24">
-        <GoogleMapReact
-          defaultCenter={location}
-          defaultZoom={zoomLevel}
-          bootstrapURLKeys={{ key: "AIzaSyCQUej5CVD-LXWkx745S3-C-7Ji3-D9H_g" }}
-        >
+        <GoogleMapReact defaultCenter={location} defaultZoom={zoomLevel} bootstrapURLKeys={{ key: "" }}>
           <LocationPin text="Hvaler Gjestgiveri" lat={location.lat} lng={location.lng} />
         </GoogleMapReact>
       </div>
