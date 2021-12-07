@@ -68,7 +68,11 @@ export const Desktopnav = () => {
           <NavLink href="sommerfest-i-hvaler">Festival</NavLink>
           <NavLink href="overnatting">Overnatting</NavLink>
           <div className="ml-32">
-            <PrimaryButtonHref text="Kontakt oss" href="kontakt-oss" />
+            <Link href="kontakt-oss">
+              <a className="justify-center bg-cta border-2 border-cta text-hvit font-semibold w-100 flex md:w-auto bg-primary_700 px-16 py-8 text-white">
+                Kontakt oss
+              </a>
+            </Link>
           </div>
         </div>
       </div>
