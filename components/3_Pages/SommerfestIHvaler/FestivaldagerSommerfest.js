@@ -6,7 +6,7 @@ export const FestivaldagerSommerfest = () => {
   const SingleDate = ({ date }) => {
     return (
       <div className="flex flex-col">
-        <h4 className="text-white">{date}</h4>
+        <h3 className="text-white">{date}</h3>
         <div className="flex justify-between">
           <div>
             <span className="text-neutral_300">artist1</span>

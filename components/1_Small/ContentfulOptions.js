@@ -34,7 +34,7 @@ export const options_sommerfest = {
         {children}
       </h2>
     ),
-    [BLOCKS.PARAGRAPH]: (node, children) => <p className="z-300 mb-24 mt-16 text-neutral_300">{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <p className="z-300 mb-24 mt-16 text-neutral_100">{children}</p>,
     [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc pb-16">{children}</ul>,
     [BLOCKS.LIST_ITEM]: (node, children) => <li className="-mb-24 text-blogg ml-16 lg:ml-32 my-8">{children}</li>,
     [INLINES.HYPERLINK]: ({ data }, children) => (
