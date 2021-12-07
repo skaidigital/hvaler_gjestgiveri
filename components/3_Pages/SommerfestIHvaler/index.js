@@ -7,7 +7,6 @@ import { InfoSommerfest } from "./InfoSommerfest";
 import { NextSeo } from "next-seo";
 
 export const SommerfestIHvaler = ({ content }) => {
-  console.log(content);
   return (
     <>
       <NextSeo
