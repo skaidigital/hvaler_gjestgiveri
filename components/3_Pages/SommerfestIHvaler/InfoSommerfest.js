@@ -31,7 +31,7 @@ export const InfoSommerfest = ({
             <h2 className="text-white text-h3 lg:text-h2 mb-8 lg:mb-16">{info_heading}</h2>
             {documentToReactComponents(info_content, options_sommerfest)}
             <Link href="" className="">
-              <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16">
+              <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
                 Kjøp billetter til Sommerfest i Hvaler
               </a>
             </Link>

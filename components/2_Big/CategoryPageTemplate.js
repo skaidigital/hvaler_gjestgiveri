@@ -30,21 +30,24 @@ export const CategoryPageTemplate = ({ content, meny }) => {
           />
         )}
       </CategoryPageContentContainer>
-      <CategoryPageImageGallery
-        heading={content.bildegalleritittel}
-        src1={content.bildegalleriCollection.items[0].url}
-        alt1={content.bildegalleriCollection.items[0].description}
-        src2={content.bildegalleriCollection.items[1].url}
-        alt2={content.bildegalleriCollection.items[1].description}
-        width2={content.bildegalleriCollection.items[1].width}
-        height2={content.bildegalleriCollection.items[1].height}
-        src3={content.bildegalleriCollection.items[2].url}
-        alt3={content.bildegalleriCollection.items[2].description}
-        src4={content.bildegalleriCollection.items[3].url}
-        alt4={content.bildegalleriCollection.items[3].description}
-        width4={content.bildegalleriCollection.items[3].width}
-        height4={content.bildegalleriCollection.items[3].height}
-      />
+      {content.bildegalleriCollection.items[0] && (
+        <CategoryPageImageGallery
+          heading={content.bildegalleritittel}
+          src1={content.bildegalleriCollection.items[0].url}
+          alt1={content.bildegalleriCollection.items[0].description}
+          src2={content.bildegalleriCollection.items[1].url}
+          alt2={content.bildegalleriCollection.items[1].description}
+          width2={content.bildegalleriCollection.items[1].width}
+          height2={content.bildegalleriCollection.items[1].height}
+          src3={content.bildegalleriCollection.items[2].url}
+          alt3={content.bildegalleriCollection.items[2].description}
+          src4={content.bildegalleriCollection.items[3].url}
+          alt4={content.bildegalleriCollection.items[3].description}
+          width4={content.bildegalleriCollection.items[3].width}
+          height4={content.bildegalleriCollection.items[3].height}
+        />
+      )}
+      {!content.bildegalleriCollection.items[0] && <div className="mt-24 md:mt-56 lg:mt-96" />}
       {content.sitatTekst && <CategoryPageQuote quote={content.sitatTekst} author={content.sitatnavn} />}
       <Footer />
     </>
