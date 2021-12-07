@@ -6,8 +6,6 @@ import { camelCase } from "../helpers/toCamelCase";
 export const NavLink = ({ children, href }, props) => {
   const router = useRouter();
 
-  console.log("href " + href);
-
   return (
     <Link href={href} passHref>
       <a

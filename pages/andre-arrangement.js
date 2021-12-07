@@ -2,8 +2,6 @@ import { AndreArrangement } from "../components/3_Pages/andre-arrangement";
 import { fetchContent } from "../components/1_Small/contentfulFetch";
 
 export default function andreArrangement({ content, arrangement }) {
-  console.log(arrangement);
-  console.log(content);
   return <AndreArrangement content={content} arrangement={arrangement} />;
 }
 

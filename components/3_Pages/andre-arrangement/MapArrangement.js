@@ -4,8 +4,6 @@ import { options } from "../../1_Small/ContentfulOptions";
 import { EnkeltArrangement } from "./EnkeltArrangement";
 
 export const MapArrangement = ({ arrangement }) => {
-  console.log("I MapArrangement");
-  console.log(arrangement);
   return arrangement.items.map((a, id) => {
     return (
       <FourEightSix key={id} c="grid justify-items-stretch">

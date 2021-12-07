@@ -6,7 +6,6 @@ export const FooterEmailCTA = () => {
 
   const onSubmit = () => {
     setFormSent(true);
-    console.log("Innsendt skjema");
   };
 
   const {

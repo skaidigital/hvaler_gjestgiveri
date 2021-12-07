@@ -17,8 +17,6 @@ import { ImageContentful } from "../components/1_Small/ImageContentful";
 
 export default function Home({ content, nap }) {
   !content && RedirectPage();
-  console.log(content);
-  console.log(nap);
 
   const image_loader = ({ src, width }) => {
     return `https://images.ctfassets.net/snep566vvl34/${src}?w=${width}`;
@@ -27,24 +25,19 @@ export default function Home({ content, nap }) {
   return (
     <>
       <NextSeo
-        title=""
-        description=""
+        title={content.hovedtittel}
+        // description={}
         openGraph={{
-          title: "",
-          description: "",
+          title: content.hovedtittel,
+          // description: "",
           images: [
             {
-              url: "",
-              width: "",
-              height: "",
-              alt: "",
+              url: content.hovedbilde.url,
+              width: content.hovedbilde.width,
+              height: content.hovedbilde.height,
+              alt: content.hovedbilde.description,
             },
           ],
-        }}
-        twitter={{
-          handle: "@skai_digital",
-          site: "@skaidigital",
-          cardType: "summary_large_image",
         }}
       />
       <InfoBanner banner_message={documentToReactComponents(content.informasjonsfane.json, options_info_fane)} />
@@ -52,8 +45,8 @@ export default function Home({ content, nap }) {
       <Hero
         SEOHeading={content.seoTittel}
         heading={content.hovedtittel}
-        imageSource={content.bildeMat.url}
-        imageAlt="alt"
+        imageSource={content.hovedbilde.url}
+        imageAlt={content.hovedbilde.description}
         loader={image_loader}
       />
       <SocialProofBanner />
@@ -179,6 +172,12 @@ export async function getStaticProps() {
         tittelOvernatting
         tittelArrangement
         tittelKursOgKonferanser
+        hovedbilde{
+          description
+          url
+          width
+          height
+        }
         brdtekstMat{
           json
         }

@@ -7,9 +7,26 @@ import { Footer } from "./Navigation/Footer";
 import { Navbar } from "./Navigation/Navbar";
 import { CategoryPageQuote } from "../1_Small/CategoryPageQuote";
 import { Menu } from "../1_Small/Menu";
+import { NextSeo } from "next-seo";
 export const CategoryPageTemplate = ({ content, meny }) => {
   return (
     <>
+      <NextSeo
+        title={content.hovedtittel}
+        // description={}
+        openGraph={{
+          title: content.hovedtittel,
+          // description: "",
+          images: [
+            {
+              url: content.hovedbilde.url,
+              width: content.hovedbilde.width,
+              height: content.hovedbilde.height,
+              alt: content.hovedbilde.description,
+            },
+          ],
+        }}
+      />
       <Navbar />
       <Hero
         imageSource={content.hovedbilde.url}

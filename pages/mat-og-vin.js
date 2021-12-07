@@ -2,7 +2,6 @@ import { fetchContent } from "../components/1_Small/contentfulFetch";
 import { CategoryPageTemplate } from "../components/2_Big/CategoryPageTemplate";
 
 export default function matOgVin({ content, meny }) {
-  console.log(meny);
   return <CategoryPageTemplate content={content} meny={meny} />;
 }
 

@@ -2,7 +2,6 @@ import { KontaktOss } from "../components/3_Pages/kontakt-oss";
 import { fetchContent } from "../components/1_Small/contentfulFetch";
 
 export default function kontaktOss({ content }) {
-  console.log(content);
   return <KontaktOss content={content} />;
 }
 
