@@ -4,7 +4,7 @@ export const DropdownArrangement = () => {
   const NavItem = ({ href, children }) => {
     return (
       <Link href={href}>
-        <a className="nav-hover hover:bg-neutral_300 px-16 py-8 font-medium">{children}</a>
+        <a className="sexy-animation nav-hover hover:bg-neutral_300 px-16 py-8 font-medium">{children}</a>
       </Link>
     );
   };

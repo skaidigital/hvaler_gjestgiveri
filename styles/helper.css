@@ -235,3 +235,40 @@
   background: #334155;
   height: 2px;
 }
+
+.sexy-animation {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.2, 1, 0.99, 0.94);
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  animation-play-state: running;
+  animation-name: no-masthead-fade;
+}
+
+.sexy-animation:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.sexy-animation:nth-of-type(3) {
+  animation-delay: calc(0.1s * 2);
+}
+
+.sexy-animation:nth-of-type(4) {
+  animation-delay: calc(0.1s * 3);
+}
+
+.sexy-animation:nth-of-type(5) {
+  animation-delay: calc(0.1s * 4);
+}
+
+@keyframes no-masthead-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

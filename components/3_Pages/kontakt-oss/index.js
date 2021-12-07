@@ -8,7 +8,6 @@ import { HeroContactPage } from "./HeroContactPage";
 import { NextSeo } from "next-seo";
 
 export const KontaktOss = ({ content }) => {
-  console.log(content);
   return (
     <>
       <NextSeo

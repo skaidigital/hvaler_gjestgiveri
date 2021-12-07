@@ -9,17 +9,13 @@ export const DesktopnavSommerfest = () => {
       <div className="flex justify-between my-24">
         <div className="self-center ">
           <Link href="/">
-            <a>
-              <p className="text-h4 text-white font-semibold flex mb-0 ">Hvaler Gjestgiveri</p>
+            <a className="text-h4 text-white font-semibold flex mb-0 items-center underline">
+              {chevron}
+              <span className="mx-4" /> Tilbake til Hvaler Gjestgiveri
             </a>
           </Link>
         </div>
         <div className="flex items-center">
-          <NavLinkSommerfest href="/">hjem</NavLinkSommerfest>
-          <NavLinkSommerfest href="mat-og-vin">Mat & Vin</NavLinkSommerfest>
-          <NavLinkSommerfest href="/">Arrangement</NavLinkSommerfest>
-          <NavLinkSommerfest href="sommerfest-i-hvaler">Festival</NavLinkSommerfest>
-          <NavLinkSommerfest href="overnatting">Overnatting</NavLinkSommerfest>
           <div className="ml-32">
             <Link href="">
               <a className="bg-sommerfest_CTA text-body_medium py-16 px-24 text-white font-semibold">Kjøp billetter</a>
@@ -30,3 +26,20 @@ export const DesktopnavSommerfest = () => {
     </Layout>
   );
 };
+
+const chevron = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="feather feather-chevron-down rotate90"
+  >
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+);

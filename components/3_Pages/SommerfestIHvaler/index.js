@@ -5,8 +5,11 @@ import { FestivaldagerSommerfest } from "./FestivaldagerSommerfest";
 import { HeroSommerfest } from "./HeroSommerfest";
 import { InfoSommerfest } from "./InfoSommerfest";
 import { NextSeo } from "next-seo";
+import { ScrollToTopArrow } from "./ScrollToTopArrow";
 
-export const SommerfestIHvaler = ({ content }) => {
+export const SommerfestIHvaler = ({ content, dates }) => {
+  const reversed_dates = [...dates].reverse();
+
   return (
     <>
       <NextSeo
@@ -27,7 +30,8 @@ export const SommerfestIHvaler = ({ content }) => {
       />
       <div className="relative">
         <div className="relative">
-          <div className="w-240 h-480 md:w-400 md:h-800  inline-block half-circle mt-240 md:mt-160 lg:mt-80 sommerfest-gradient absolute z-1 right-0"></div>
+          <ScrollToTopArrow />
+          <div className="w-240 h-480 md:w-400 md:h-800  inline-block half-circle mt-96 md:mt-64 lg:mt-80 sommerfest-gradient absolute z-1 right-0"></div>
           <HeroSommerfest
             hero_seo_heading={content.seoHeading}
             hero_heading={content.hovedtittel}
@@ -37,7 +41,7 @@ export const SommerfestIHvaler = ({ content }) => {
             hero_image_width={content.tittelbilde.width}
             hero_image_height={content.tittelbilde.height}
           />
-          <div className="w-240 h-480 md:w-400 md:h-800 lg:w-640 lg:h-1280 inline-block half-circle-left mt-560 md:mt-360 lg:mt-240 sommerfest-gradient absolute z-0 left-0"></div>
+          <div className="w-240 h-480 md:w-400 md:h-800 lg:w-640 lg:h-1280 inline-block half-circle-left mt-560 md:mt-800 lg:mt-240 sommerfest-gradient absolute z-0 left-0"></div>
           <InfoSommerfest
             info_heading={content.tittelKonsertpakke}
             info_content={content.konsertpakkeInnhold.json}
@@ -52,7 +56,7 @@ export const SommerfestIHvaler = ({ content }) => {
           artist_images={content.bilderUtvalgteArtisterCollection}
           artist_names={content.navnUtvalgteArtister}
         />
-        <FestivaldagerSommerfest />
+        <FestivaldagerSommerfest dates={reversed_dates} />
       </div>
     </>
   );
