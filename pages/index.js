@@ -123,8 +123,8 @@ export default function Home({ content, nap }) {
             </HorizontalCardCTA>
           </FourEightSix>
         </Grid>
-        <div className="mb-56 md:mb-96 lg:mb-160" />
-        <Grid c="gap-y-56 md:gap-y-96 lg:gap-y-160">
+        <div className="lg:mb-160" />
+        <Grid c="lg:gap-y-160">
           <FourEightSix c="lg:pr-24 row-start-2 lg:row-start-auto mb-96 mt-32 lg:my-0">
             <HorizontalCardCTA SEOHeading={content.seoSelskap} heading={content.tittelSelskap}>
               {documentToReactComponents(content.innholdSelskap.json, options)}

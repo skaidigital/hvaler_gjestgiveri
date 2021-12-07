@@ -19,6 +19,7 @@ const FacebookRating = () => {
     <div className="flex items-center text-white md:mt-16 lg:mt-0">
       {facebook_logo} <span className="mx-8">{star}</span>{" "}
       <span className="font-semibold text-body_large text-white">5 av 5</span>
+      <span className="font-semibold text-body_large text-white ml-8">(86)</span>
     </div>
   );
 };
@@ -29,6 +30,7 @@ const GoogleRating = () => {
       {google_logo}
       <span className="mx-8 font-semibold text-body_large text-white">4.6</span>
       {google_rating_svg}
+      <span className="mx-8 font-semibold text-body_large text-white">(96)</span>
     </div>
   );
 };
@@ -39,6 +41,7 @@ const TripadvisorRating = () => {
       {tripadvisor_logo}
       <span className="mx-8 font-semibold text-body_large text-white">4.5</span>
       {tripadvisor_rating_svg}
+      <span className="mx-8 font-semibold text-body_large text-white">(33)</span>
     </div>
   );
 };
