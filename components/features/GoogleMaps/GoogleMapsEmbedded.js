@@ -6,7 +6,7 @@ export const GoogleMapsEmbedded = ({ c }) => {
       style={{ border: "0" }}
       loading="lazy"
       allowFullScreen
-      src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJgSPrT_wYREYRlVowZrUXFfE&key=${process.env.MAPS_API_KEY}`}
+      src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJgSPrT_wYREYRlVowZrUXFfE&key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}`}
     />
   );
 };
