@@ -1,15 +1,19 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Grid, Layout } from "../../1_Small/Base";
-import { options, options_sommerfest } from "../../1_Small/ContentfulOptions";
+import { options, options_sommerfest, options_info_fane } from "../../1_Small/ContentfulOptions";
 import { Hero } from "../../1_Small/Hero";
 import { Footer } from "../../2_Big/Navigation/Footer";
 import { Navbar } from "../../2_Big/Navigation/Navbar";
 import { MapArrangement } from "./MapArrangement";
 import { OmVertskapet } from "./OmVertskapet";
+import { InfoBanner } from "../../1_Small/InfoBanner";
 
-export const AndreArrangement = ({ arrangement, content }) => {
+export const AndreArrangement = ({ arrangement, content, informasjonsfane }) => {
   return (
     <>
+      <InfoBanner
+        banner_message={documentToReactComponents(informasjonsfane && informasjonsfane.json, options_info_fane)}
+      />
       <Navbar />
       <Hero
         SEOHeading={content.seoHeading}

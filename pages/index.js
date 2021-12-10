@@ -15,7 +15,7 @@ import { InfoNAPSection } from "../components/1_Small/InfoNAPSection";
 import { InfoBanner } from "../components/1_Small/InfoBanner";
 import { ImageContentful } from "../components/1_Small/ImageContentful";
 
-export default function Home({ content, nap }) {
+export default function Home({ content, nap, informasjonsfane }) {
   !content && RedirectPage();
 
   const image_loader = ({ src, width }) => {
@@ -40,7 +40,9 @@ export default function Home({ content, nap }) {
           ],
         }}
       />
-      <InfoBanner banner_message={documentToReactComponents(content.informasjonsfane.json, options_info_fane)} />
+      <InfoBanner
+        banner_message={documentToReactComponents(informasjonsfane && informasjonsfane.json, options_info_fane)}
+      />
       <Navbar />
       <Hero
         SEOHeading={content.seoTittel}
@@ -154,11 +156,14 @@ function RedirectPage() {
 export async function getStaticProps() {
   const response = await fetchContent(`
   {
+    informasjonsfane (id:"3p4dvYzDmBwrhkSasDbvoq"){
+      innhold{
+        json
+      }
+    }
     forsideCollection{
       items{
-        informasjonsfane{
-          json
-        }
+        
         hovedtittel
         seoTittel
         seoTittelMat
@@ -258,6 +263,7 @@ export async function getStaticProps() {
     props: {
       content: response.forsideCollection.items[0],
       nap: response.contactInfoCollection.items[0],
+      informasjonsfane: response.informasjonsfane.innhold,
     },
     revalidate: 60,
   };

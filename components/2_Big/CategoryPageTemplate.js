@@ -1,14 +1,16 @@
 import { CategoryPageContentContainer } from "../1_Small/CategoryPageContentContainer";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Hero } from "../1_Small/Hero";
-import { options } from "../1_Small/ContentfulOptions";
+import { options, options_info_fane } from "../1_Small/ContentfulOptions";
 import { CategoryPageImageGallery } from "../1_Small/CategoryPageImageGallery";
 import { Footer } from "./Navigation/Footer";
 import { Navbar } from "./Navigation/Navbar";
 import { CategoryPageQuote } from "../1_Small/CategoryPageQuote";
 import { Menu } from "../1_Small/Menu";
 import { NextSeo } from "next-seo";
-export const CategoryPageTemplate = ({ content, meny }) => {
+import { InfoBanner } from "../1_Small/InfoBanner";
+export const CategoryPageTemplate = ({ content, meny, informasjonsfane }) => {
+  console.log(informasjonsfane);
   return (
     <>
       <NextSeo
@@ -27,6 +29,10 @@ export const CategoryPageTemplate = ({ content, meny }) => {
           ],
         }}
       />
+      <InfoBanner
+        banner_message={documentToReactComponents(informasjonsfane && informasjonsfane.json, options_info_fane)}
+      />
+
       <Navbar />
       <Hero
         imageSource={content.hovedbilde.url}

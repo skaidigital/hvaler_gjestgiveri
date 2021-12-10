@@ -6,8 +6,11 @@ import { Map } from "../../features/GoogleMaps/Map";
 import { ContactForm } from "./ContactForm";
 import { HeroContactPage } from "./HeroContactPage";
 import { NextSeo } from "next-seo";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { options_info_fane } from "../../1_Small/ContentfulOptions";
+import { InfoBanner } from "../../1_Small/InfoBanner";
 
-export const KontaktOss = ({ content }) => {
+export const KontaktOss = ({ content, informasjonsfane }) => {
   return (
     <>
       <NextSeo
@@ -25,6 +28,9 @@ export const KontaktOss = ({ content }) => {
             },
           ],
         }}
+      />
+      <InfoBanner
+        banner_message={documentToReactComponents(informasjonsfane && informasjonsfane.json, options_info_fane)}
       />
       <Navbar />
       <HeroContactPage content={content} />

@@ -1,8 +1,8 @@
 import { fetchContent } from "../components/1_Small/contentfulFetch";
 import { CategoryPageTemplate } from "../components/2_Big/CategoryPageTemplate";
 
-export default function matOgVin({ content, meny }) {
-  return <CategoryPageTemplate content={content} meny={meny} />;
+export default function matOgVin({ content, meny, informasjonsfane }) {
+  return <CategoryPageTemplate content={content} meny={meny} informasjonsfane={informasjonsfane} />;
 }
 
 export async function getStaticProps() {
@@ -34,6 +34,11 @@ export async function getStaticProps() {
         sitatTekst
         sitatnavn
   }
+  informasjonsfane (id:"3p4dvYzDmBwrhkSasDbvoq"){
+    innhold{
+      json
+    }
+  }
   meny(id:"3tLllTAAZf366UvWreBzJy"){
     pris3RettersMat
     pris5RettersMat
@@ -46,6 +51,7 @@ export async function getStaticProps() {
     props: {
       content: response.hero,
       meny: response.meny,
+      informasjonsfane: response.informasjonsfane.innhold,
     },
     revalidate: 60,
   };
