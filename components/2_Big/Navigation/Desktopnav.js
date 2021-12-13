@@ -57,7 +57,7 @@ export const Desktopnav = () => {
         </div>
         <div className="flex items-center">
           <NavLink href="/">hjem</NavLink>
-          <NavLink href="overnatting">Aktuelt</NavLink>
+          <NavLink href="aktuelt">Aktuelt</NavLink>
           <NavLink href="overnatting">Overnatting</NavLink>
 
           <NavLink href="mat-og-vin">Mat & Vin</NavLink>

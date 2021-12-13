@@ -37,7 +37,7 @@ export const Mobilenav = () => {
       <>
         <div className="flex flex-col mb-56">
           <MobileNavLink href="/">Hjem</MobileNavLink>
-          <MobileNavLink href="/overnatting">Aktuelt</MobileNavLink>
+          <MobileNavLink href="/aktuelt">Aktuelt</MobileNavLink>
           <MobileNavLink href="/overnatting">Overnatting</MobileNavLink>
           <MobileNavLink href="/mat-og-vin">Mat & Vin</MobileNavLink>
           <MobileNavButton onClick={showArrangement}>
