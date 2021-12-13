@@ -37,13 +37,14 @@ export const Mobilenav = () => {
       <>
         <div className="flex flex-col mb-56">
           <MobileNavLink href="/">Hjem</MobileNavLink>
+          <MobileNavLink href="/overnatting">Aktuelt</MobileNavLink>
+          <MobileNavLink href="/overnatting">Overnatting</MobileNavLink>
           <MobileNavLink href="/mat-og-vin">Mat & Vin</MobileNavLink>
           <MobileNavButton onClick={showArrangement}>
             <div className="flex justify-between w-100 items-center">
               Arrangement <span className="">{chevron}</span>
             </div>
           </MobileNavButton>
-          <MobileNavLink href="/overnatting">Overnatting</MobileNavLink>
           <MobileNavLink href="/kontakt-oss">Kontakt oss</MobileNavLink>
         </div>
       </>
@@ -57,7 +58,9 @@ export const Mobilenav = () => {
       <Layout>
         <div className="flex justify-between py-24">
           <Link href="/">
-            <a className="text-h3 font-semibold flex mb-0 self-center">{storeNameOrLogo}</a>
+            <a className="text-h3 font-semibold flex mb-0 self-center">
+              {storeNameOrLogo}
+            </a>
           </Link>
 
           <div className="strek flex self-center" onClick={openFirstScreen}>
@@ -71,7 +74,9 @@ export const Mobilenav = () => {
             />
           </div>
         </div>
-        {openArrangement && <MobileNavArrangement onClick={previousScreenHandler} />}
+        {openArrangement && (
+          <MobileNavArrangement onClick={previousScreenHandler} />
+        )}
         {showMainOptions && <OpenMobileNav />}
       </Layout>
     </>

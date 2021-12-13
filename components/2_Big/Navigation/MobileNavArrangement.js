@@ -10,10 +10,12 @@ export const MobileNavArrangement = ({ onClick }) => {
           <span className="mr-8">{chevron}</span> Gå tilbake
         </div>
       </MobileNavButton>
+      <MobileNavLink href="/andre-arrangement">Temakvelder</MobileNavLink>
       <MobileNavLink href="/bryllup">Bryllup</MobileNavLink>
-      <MobileNavLink href="/kurs-og-konferanser">Kurs & Konferanser</MobileNavLink>
+      <MobileNavLink href="/kurs-og-konferanser">
+        Kurs & Konferanser
+      </MobileNavLink>
       <MobileNavLink href="/selskap">Selskap</MobileNavLink>
-      <MobileNavLink href="/andre-arrangement">Andre arrangement</MobileNavLink>
     </div>
   );
 };
