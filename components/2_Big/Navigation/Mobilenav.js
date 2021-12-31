@@ -45,6 +45,8 @@ export const Mobilenav = () => {
               Arrangement <span className="">{chevron}</span>
             </div>
           </MobileNavButton>
+
+          <MobileNavLink href="/sommerfest-i-hvaler">Festihvaler</MobileNavLink>
           <MobileNavLink href="/kontakt-oss">Kontakt oss</MobileNavLink>
         </div>
       </>
