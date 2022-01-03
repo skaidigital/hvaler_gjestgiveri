@@ -97,8 +97,8 @@ export default function Home({ content, nap, informasjonsfane }) {
           <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto ">
             <ImageContentful
               loader={image_loader}
-              src={`${content.bildeMat.url}`}
-              alt={content.bildeMat.description}
+              src={`${content.bildeOvernatting.url}`}
+              alt={content.bildeOvernatting.description}
               layout="fill"
               className="object-cover"
             />
@@ -134,8 +134,8 @@ export default function Home({ content, nap, informasjonsfane }) {
           <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto row-start-5 lg:row-start-auto">
             <ImageContentful
               loader={image_loader}
-              src={`${content.bildeMat.url}`}
-              alt={content.bildeMat.description}
+              src={`${content.bildeBryllup.url}`}
+              alt={content.bildeBryllup.description}
               layout="fill"
               className="object-cover"
             />
@@ -144,8 +144,8 @@ export default function Home({ content, nap, informasjonsfane }) {
           <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto ">
             <ImageContentful
               loader={image_loader}
-              src={`${content.bildeMat.url}`}
-              alt={content.bildeMat.description}
+              src={`${content.bildeKursOgKonferanser.url}`}
+              alt={content.bildeKursOgKonferanser.description}
               layout="fill"
               className="object-cover"
             />
@@ -183,8 +183,8 @@ export default function Home({ content, nap, informasjonsfane }) {
           <FourEightSix c="grid justify-items-stretch relative h-240 md:h-400 lg:h-auto">
             <ImageContentful
               loader={image_loader}
-              src={`${content.bildeMat.url}`}
-              alt={content.bildeMat.description}
+              src={`${content.bildeSelskap.url}`}
+              alt={content.bildeSelskap.description}
               layout="fill"
               className="object-cover"
             />
@@ -317,6 +317,7 @@ export async function getStaticProps() {
     }
   }
     `);
+  console.log(response);
   return {
     props: {
       content: response.forsideCollection.items[0],

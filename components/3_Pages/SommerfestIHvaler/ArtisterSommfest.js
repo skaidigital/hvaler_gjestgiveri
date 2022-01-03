@@ -49,7 +49,7 @@ export const ArtisterSommfest = ({
           <FourEightEight c="lg:col-start-3 z-1">
             <SubGrid24 c="grid-cols-2 md:grid-cols-4 lg:grid-cols-8 text-white">
               <TwoFourEight>
-                <h2 className="text-white">Årets artister</h2>
+                {/* <h2 className="text-white">Årets artister</h2> */}
                 {documentToReactComponents(artist_info, options_sommerfest)}
               </TwoFourEight>
               <MapHighlightedArtists />

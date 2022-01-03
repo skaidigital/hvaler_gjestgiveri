@@ -57,6 +57,9 @@ export const Desktopnav = () => {
         </div>
         <div className="flex items-center">
           <NavLink href="/">hjem</NavLink>
+          <NavLink href="aktuelt">Aktuelt</NavLink>
+          <NavLink href="overnatting">Overnatting</NavLink>
+
           <NavLink href="mat-og-vin">Mat & Vin</NavLink>
           <div className="flex flex-col ">
             <button
@@ -69,8 +72,7 @@ export const Desktopnav = () => {
             {openDropdownArrangement && <ArrangementDropdownOpen />}
           </div>
 
-          <NavLink href="sommerfest-i-hvaler">FestIHvaler</NavLink>
-          <NavLink href="overnatting">Overnatting</NavLink>
+          <NavLink href="sommerfest-i-hvaler">FestiHvaler</NavLink>
           <div className="ml-32">
             <Link href="kontakt-oss">
               <a className="justify-center bg-cta border-2 border-cta text-hvit font-semibold w-100 flex md:w-auto bg-primary_700 px-16 py-8 text-white">
