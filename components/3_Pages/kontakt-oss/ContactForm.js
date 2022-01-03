@@ -1,7 +1,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { FourEightEight, FourEightSix, FourFourFour, FourFourThree, Grid } from "../../1_Small/Base";
+import {
+  FourEightEight,
+  FourEightSix,
+  FourFourFour,
+  FourFourThree,
+  Grid,
+} from "../../1_Small/Base";
 
 export const ContactForm = () => {
   const [formSent, setFormSent] = useState(false);
@@ -28,7 +34,11 @@ export const ContactForm = () => {
   });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} id="kontaktskjema" className="my-56 md:my-96 lg:my-160">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      id="kontaktskjema"
+      className="my-56 md:my-96 lg:my-160"
+    >
       <Grid>
         {/* //! name */}
         <FourFourFour c="lg:col-start-3">
@@ -176,7 +186,9 @@ export const ContactForm = () => {
               <div className="flex items-center">
                 {/* <span className="mr-8">{person}</span> */}
                 Skrive en melding?{" "}
-                <span className="py-4 px-8 text-body_small bg-neutral_300 rounded-rund ml-4 text-black">Valgfritt</span>
+                <span className="py-4 px-8 text-body_small bg-neutral_300 rounded-rund ml-4 text-black">
+                  Valgfritt
+                </span>
               </div>
               <input
                 name="message"
@@ -197,8 +209,9 @@ export const ContactForm = () => {
               })}
             />
             <span className="text-body_medium ml-8">
-              Ved å sende inn skjemaet samtykker du til at vi lagrer informasjonen din. Du kan når som helst trekke
-              tilbake samtykket. Les mer om hvordan vi håndterer dine data i vår{" "}
+              Ved å sende inn skjemaet samtykker du til at vi lagrer
+              informasjonen din. Du kan når som helst trekke tilbake samtykket.
+              Les mer om hvordan vi håndterer dine data i vår{" "}
               <Link href="/personvern">
                 <a target="blank" className="text-body_medium underline">
                   personvernerklæring.
@@ -213,7 +226,10 @@ export const ContactForm = () => {
               </span>
             )}
           </div>
-          <button type="submit" className="py-16 text-center text-white bg-primary_700 font-semibold w-100">
+          <button
+            type="submit"
+            className="py-16 text-center text-white bg-primary_700 font-semibold w-100"
+          >
             Send min forespørsel
           </button>
         </FourEightEight>

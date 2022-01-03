@@ -10,7 +10,6 @@ import { Menu } from "../1_Small/Menu";
 import { NextSeo } from "next-seo";
 import { InfoBanner } from "../1_Small/InfoBanner";
 export const CategoryPageTemplate = ({ content, meny, informasjonsfane }) => {
-  console.log(informasjonsfane);
   return (
     <>
       <NextSeo
@@ -30,7 +29,10 @@ export const CategoryPageTemplate = ({ content, meny, informasjonsfane }) => {
         }}
       />
       <InfoBanner
-        banner_message={documentToReactComponents(informasjonsfane && informasjonsfane.json, options_info_fane)}
+        banner_message={documentToReactComponents(
+          informasjonsfane && informasjonsfane.json,
+          options_info_fane
+        )}
       />
 
       <Navbar />
@@ -70,8 +72,15 @@ export const CategoryPageTemplate = ({ content, meny, informasjonsfane }) => {
           height4={content.bildegalleriCollection.items[3].height}
         />
       )}
-      {!content.bildegalleriCollection.items[0] && <div className="mt-24 md:mt-56 lg:mt-96" />}
-      {content.sitatTekst && <CategoryPageQuote quote={content.sitatTekst} author={content.sitatnavn} />}
+      {!content.bildegalleriCollection.items[0] && (
+        <div className="mt-24 md:mt-56 lg:mt-96" />
+      )}
+      {content.sitatTekst && (
+        <CategoryPageQuote
+          quote={content.sitatTekst}
+          author={content.sitatnavn}
+        />
+      )}
       <Footer />
     </>
   );

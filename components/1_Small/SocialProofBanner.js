@@ -2,7 +2,10 @@ import { Layout } from "./Base";
 
 export const SocialProofBanner = () => {
   return (
-    <section id="social-proof" className="bg-secondary_700 py-8 md:py-16 mb-56 lg:mb-96">
+    <section
+      id="social-proof"
+      className="bg-secondary_700 py-8 md:py-16 mb-56 lg:mb-96"
+    >
       <Layout>
         <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between md:justify-center lg:items-center text-white my-8">
           <TripadvisorRating />
@@ -19,7 +22,9 @@ const FacebookRating = () => {
     <div className="flex items-center text-white md:mt-16 lg:mt-0">
       {facebook_logo} <span className="mx-8">{star}</span>{" "}
       <span className="font-semibold text-body_large text-white">5 av 5</span>
-      <span className="font-semibold text-body_large text-white ml-8">(86)</span>
+      <span className="font-semibold text-body_large text-white ml-8">
+        (86)
+      </span>
     </div>
   );
 };
@@ -30,7 +35,9 @@ const GoogleRating = () => {
       {google_logo}
       <span className="mx-8 font-semibold text-body_large text-white">4.6</span>
       {google_rating_svg}
-      <span className="mx-8 font-semibold text-body_large text-white">(96)</span>
+      <span className="mx-8 font-semibold text-body_large text-white">
+        (96)
+      </span>
     </div>
   );
 };
@@ -41,7 +48,9 @@ const TripadvisorRating = () => {
       {tripadvisor_logo}
       <span className="mx-8 font-semibold text-body_large text-white">4.5</span>
       {tripadvisor_rating_svg}
-      <span className="mx-8 font-semibold text-body_large text-white">(33)</span>
+      <span className="mx-8 font-semibold text-body_large text-white">
+        (33)
+      </span>
     </div>
   );
 };
@@ -56,8 +65,14 @@ const google_logo = (
     className="pt-4"
     preserveAspectRatio="xMidYMid meet"
   >
-    <metadata>Created by potrace 1.15, written by Peter Selinger 2001-2017</metadata>
-    <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)" fill="white" stroke="none">
+    <metadata>
+      Created by potrace 1.15, written by Peter Selinger 2001-2017
+    </metadata>
+    <g
+      transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
+      fill="white"
+      stroke="none"
+    >
       <path
         d="M1457 5289 c-371 -43 -707 -209 -980 -485 -239 -242 -391 -533 -454
 -869 -26 -138 -23 -418 6 -554 47 -222 125 -415 238 -586 267 -406 661 -659
@@ -157,7 +172,13 @@ const tripadvisor_logo = (
 );
 
 const tripadvisor_rating_svg = (
-  <svg width="129" height="24" viewBox="0 0 129 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="129"
+    height="24"
+    viewBox="0 0 129 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="12.9172" cy="12" r="12" fill="white" fillOpacity="1" />
     <circle cx="38.9172" cy="12" r="12" fill="white" fillOpacity="1" />
     <circle cx="64.9172" cy="12" r="12" fill="white" fillOpacity="1" />
@@ -189,7 +210,13 @@ const star = (
 );
 
 const google_rating_svg = (
-  <svg width="125" height="24" viewBox="0 0 125 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="125"
+    height="24"
+    viewBox="0 0 125 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M11.1589 0.834866L8.10748 7.04035L1.28039 8.03866C0.0560969 8.21677 -0.434556 9.73064 0.453292 10.5977L5.39254 15.4253L4.22431 22.2447C4.01403 23.4774 5.30842 24.4007 6.39253 23.8242L12.5 20.6043L18.6075 23.8242C19.6916 24.396 20.986 23.4774 20.7757 22.2447L19.6075 15.4253L24.5467 10.5977C25.4346 9.73064 24.9439 8.21677 23.7196 8.03866L16.8925 7.04035L13.8411 0.834866C13.2944 -0.271247 11.7103 -0.285308 11.1589 0.834866Z"
       fill="white"
@@ -219,7 +246,13 @@ const google_rating_svg = (
 );
 
 const facebook_logo = (
-  <svg width="96" height="18" viewBox="0 0 125 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="96"
+    height="18"
+    viewBox="0 0 125 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_8_1477)">
       <path
         d="M10.4163 3.78687C8.96264 3.78687 8.52655 4.42647 8.52655 5.85104V8.20595H12.4223L12.0444 12.0436H8.52655V23.6437H3.84581V12.0436H0.705933V8.23502H3.84581V5.93826C3.84581 2.04249 5.41575 0.00738525 9.74761 0.00738525C10.6489 0.00738525 11.5792 0.0655311 12.4805 0.181823V3.78687"
@@ -264,7 +297,12 @@ const facebook_logo = (
     </g>
     <defs>
       <clipPath id="clip0_8_1477">
-        <rect width="123.967" height="24" fill="white" transform="translate(0.705933)" />
+        <rect
+          width="123.967"
+          height="24"
+          fill="white"
+          transform="translate(0.705933)"
+        />
       </clipPath>
     </defs>
   </svg>

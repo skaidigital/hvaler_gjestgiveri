@@ -17,10 +17,14 @@ export const FooterEmailCTA = () => {
   });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col mt-16 md:mt-0 mb-24 md:mb-56 lg:mb-0">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col mt-16 md:mt-0 mb-24 md:mb-56 lg:mb-0"
+    >
       <h2 className="text-white">Hold kontakten!</h2>
       <p className="text-white text-body_medium mb-24">
-        Vil du få et nyhetsbrev i ny og né med bilder og nyheter fra oss? Meld deg på nyhetsbrevet vårt!
+        Vil du få et nyhetsbrev i ny og né med bilder og nyheter fra oss? Meld
+        deg på nyhetsbrevet vårt!
       </p>
       <div className="flex">
         <div className="flex flex-col flex-1 bg-neutral_300 w-60">
@@ -59,7 +63,10 @@ export const FooterEmailCTA = () => {
                           </span>
                         )}
                       </div> */}
-        <button className="bg-primary_700 text-body_medium px-24 font-semibold" type="submit">
+        <button
+          className="bg-primary_700 text-body_medium px-24 font-semibold"
+          type="submit"
+        >
           Meld meg på
         </button>
       </div>
@@ -77,11 +84,15 @@ export const FooterEmailCTA = () => {
             required: "Du må samtykke før vi lar deg sende denne!",
           })}
         />
-        <span className="text-body_medium text-neutral_300 ml-8">
-          Ved å sende inn skjemaet samtykker du til at vi lagrer informasjonen din. Du kan når som helst trekke tilbake
-          samtykket. Les mer om hvordan vi håndterer dine data i vår{" "}
+        <span className="text-body_medium text-neutral_50  ml-8">
+          Ved å sende inn skjemaet samtykker du til at vi lagrer informasjonen
+          din. Du kan når som helst trekke tilbake samtykket. Les mer om hvordan
+          vi håndterer dine data i vår{" "}
           <Link href="/personvern">
-            <a target="blank" className="text-body_medium underline">
+            <a
+              target="blank"
+              className="text-body_medium underline text-neutral_50  "
+            >
               personvernerklæring.
             </a>
           </Link>

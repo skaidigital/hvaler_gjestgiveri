@@ -4,7 +4,11 @@ export const ScrollToTopArrow = () => {
   };
 
   return (
-    <button type="button" onClick={scrollToTop} className="fixed bottom-0 right-0 p-16 bg-sommerfest_sommerfest_CTA">
+    <button
+      type="button"
+      onClick={scrollToTop}
+      className="fixed bottom-0 right-0 p-16 bg-sommerfest_CTA m-24 hover:rounded-circle focus:rounded-circle"
+    >
       {arrow_up}
     </button>
   );
@@ -17,7 +21,7 @@ const arrow_up = (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke="white"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"

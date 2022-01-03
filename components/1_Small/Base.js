@@ -36,7 +36,10 @@ export const Section = ({ children, id, farge, pt }) => {
 };
 export const SectionNav = ({ children, id, c }) => {
   return (
-    <section id={id} className={`${c} mx-auto align-center py-32 md:py-56 lg:py-96`}>
+    <section
+      id={id}
+      className={`${c} mx-auto align-center py-32 md:py-56 lg:py-96`}
+    >
       {children}
     </section>
   );
@@ -97,7 +100,9 @@ export const HeroContainerUtenPadding = ({ children, id, farge, pt }) => {
 export const Layout = ({ children, c }) => {
   return (
     <>
-      <div className={`container mx-auto w-screen md:max-w lg:max-w xl:max-w ${c}`}>
+      <div
+        className={`container mx-auto w-screen md:max-w lg:max-w xl:max-w ${c}`}
+      >
         <div className="max-w-95 mx-auto align-center">{children}</div>
       </div>
     </>
@@ -284,6 +289,14 @@ export const FourEightFive = ({ c, children, id }) => {
 export const FourEightSix = ({ c, children, id }) => {
   return (
     <div key={id} className={`${c} col-span-4 md:col-span-8 lg:col-span-6`}>
+      {children}
+    </div>
+  );
+};
+
+export const FourEightSeven = ({ c, children, id }) => {
+  return (
+    <div key={id} className={`${c} col-span-4 md:col-span-8 lg:col-span-7`}>
       {children}
     </div>
   );

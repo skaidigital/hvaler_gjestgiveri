@@ -6,10 +6,10 @@ import { HeroSommerfest } from "./HeroSommerfest";
 import { InfoSommerfest } from "./InfoSommerfest";
 import { NextSeo } from "next-seo";
 import { ScrollToTopArrow } from "./ScrollToTopArrow";
+import { SommerfestGalleri } from "./sommerfest-galleri";
 
 export const SommerfestIHvaler = ({ content, dates }) => {
   const reversed_dates = [...dates].reverse();
-
   return (
     <>
       <NextSeo
@@ -51,12 +51,19 @@ export const SommerfestIHvaler = ({ content, dates }) => {
             info_image_height={content.bildeKonsertpakke.height}
           />
         </div>
-        <ArtisterSommfest
-          artist_info={content.artisterInnhold.json}
-          artist_images={content.bilderUtvalgteArtisterCollection}
-          artist_names={content.navnUtvalgteArtister}
+        {content.bilderUtvalgteArtisterCollection.items.length != 0 && (
+          <ArtisterSommfest
+            artist_info={content.artisterInnhold.json}
+            artist_images={content.bilderUtvalgteArtisterCollection}
+            artist_names={content.navnUtvalgteArtister}
+          />
+        )}
+        {dates.length != 0 && (
+          <FestivaldagerSommerfest dates={reversed_dates} />
+        )}
+        <SommerfestGalleri
+          gallery={content.bildegalleriSommerfestIHvalerCollection}
         />
-        <FestivaldagerSommerfest dates={reversed_dates} />
       </div>
     </>
   );

@@ -28,7 +28,7 @@ module.exports = {
       primary_500: "#E2E8F0",
       primary_700: "#B84825",
       primary_900: "#006E7E",
-      secondary_700: "#2B5275",
+      secondary_700: "#3F8DAB",
       secondary_50: "#",
       secondary_300: "#",
       secondary_500: "#",

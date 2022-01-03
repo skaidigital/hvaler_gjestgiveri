@@ -35,7 +35,9 @@ export const Desktopnav = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`${openDropdownArrangement && "rotate-180"} feather mt-2 feather-chevron-down `}
+      className={`${
+        openDropdownArrangement && "rotate-180"
+      } feather mt-2 feather-chevron-down `}
     >
       <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
@@ -47,7 +49,9 @@ export const Desktopnav = () => {
         <div className="self-center ">
           <Link href="/">
             <a>
-              <p className="text-h4 font-semibold flex mb-0 ">Hvaler Gjestgiveri</p>
+              <p className="text-h4 font-semibold flex mb-0 ">
+                Hvaler Gjestgiveri
+              </p>
             </a>
           </Link>
         </div>
@@ -65,7 +69,7 @@ export const Desktopnav = () => {
             {openDropdownArrangement && <ArrangementDropdownOpen />}
           </div>
 
-          <NavLink href="sommerfest-i-hvaler">Festival</NavLink>
+          <NavLink href="sommerfest-i-hvaler">FestIHvaler</NavLink>
           <NavLink href="overnatting">Overnatting</NavLink>
           <div className="ml-32">
             <Link href="kontakt-oss">
