@@ -13,22 +13,37 @@ export const HeroSommerfest = ({
   hero_image_alt,
   hero_image_width,
   hero_image_height,
+  purchase_href,
 }) => {
   return (
     <>
       <NavbarSommerfest />
-      <section id="hero" className="bg-sommerfest_primary pt-24 pb-56 md:pb-96 lg:py-160 ">
+      <section
+        id="hero"
+        className="bg-sommerfest_primary pt-24 pb-56 md:pb-96 lg:py-160 "
+      >
         <Layout>
           <Grid>
             <FourEightFive c="lg:col-start-2 lg:pr-24 md:mb-32 lg:mb-0 mb-16 z-2">
-              <h1 className="text-white text-body_medium tracking-widest font-medium">{hero_seo_heading}</h1>
-              <h2 className="text-white text-h2 lg:text-h1 mb-8 lg:mb-16">{hero_heading}</h2>
+              <h1 className="text-white text-body_medium tracking-widest font-medium">
+                {hero_seo_heading}
+              </h1>
+              <h2 className="text-white text-h2 lg:text-h1 mb-8 lg:mb-16">
+                {hero_heading}
+              </h2>
               <p className="text-neutral_300 mb-16">{hero_body_text}</p>
-              <Link href="" className="">
-                <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
-                  Kjøp billetter til Sommerfest i Hvaler
-                </a>
-              </Link>
+              {purchase_href != null ? (
+                <Link
+                  href={purchase_href != null ? purchase_href : " "}
+                  className=""
+                >
+                  <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
+                    Kjøp billetter til Sommerfest i Hvaler
+                  </a>
+                </Link>
+              ) : (
+                <></>
+              )}
             </FourEightFive>
             <FourEightFive c="z-2 row-start-1 lg:row-start-auto mb-16 md:mb-24 lg:mb-0 grid justify-items-stretch">
               <ImageContentful

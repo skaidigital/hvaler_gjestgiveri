@@ -14,6 +14,7 @@ export async function getStaticProps() {
      seoHeading
       hovedtittel
       brdtekstTittel
+      ticketmasterLink
       tittelbilde{
         url
         description

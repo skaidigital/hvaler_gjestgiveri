@@ -14,15 +14,15 @@ export const ContactForm = () => {
 
   const onSubmit = (data) => {
     setFormSent(true);
-    // const form_data = JSON.stringify(data);
+    const form_data = JSON.stringify(data);
 
-    // fetch("https://formspree.io/f/xwkyeljd", {
-    //   method: "POST",
-    //   body: form_data,
-    //   headers: {
-    //     Accept: "application/json",
-    //   },
-    // });
+    fetch("https://formspree.io/f/xdobkpyy", {
+      method: "POST",
+      body: form_data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
   };
 
   const {
