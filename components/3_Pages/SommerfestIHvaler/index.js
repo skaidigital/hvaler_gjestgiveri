@@ -11,8 +11,6 @@ import { SommerfestGalleri } from "./sommerfest-galleri";
 export const SommerfestIHvaler = ({ content, dates }) => {
   const reversed_dates = [...dates].reverse();
 
-  // console.log(content);
-
   const purchaseLink = content.ticketmasterLink != null ? true : false;
 
   const renderedContent = purchaseLink ? (

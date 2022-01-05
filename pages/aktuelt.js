@@ -22,7 +22,6 @@ import { ImageContentful } from "../components/1_Small/ImageContentful";
 import { formatDate } from "../components/1_Small/formatDate";
 
 export default function aktuelt({ content, informasjonsfane, aktuelt }) {
-  // console.log(aktuelt);
   const image_loader = ({ src, width }) => {
     return `https://images.ctfassets.net/snep566vvl34/${src}?w=${width}`;
   };
