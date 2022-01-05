@@ -53,7 +53,7 @@ export const Footer = () => {
                 target="blank"
                 href="mailto:post@hvalergjestegiveri.no"
               >
-                post@hvalergjestegiveri.no
+                post@hvalergjestgiveri.no
               </a>
               <FooterHeading>Telefonnummer</FooterHeading>
               <a

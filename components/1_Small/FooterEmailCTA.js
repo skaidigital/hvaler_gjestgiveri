@@ -4,8 +4,17 @@ import { useState } from "react";
 export const FooterEmailCTA = () => {
   const [formSent, setFormSent] = useState(false);
 
-  const onSubmit = () => {
+  const onSubmit = (data) => {
     setFormSent(true);
+    const form_data = JSON.stringify(data);
+
+    fetch("https://formspree.io/f/mrgjbojl", {
+      method: "POST",
+      body: form_data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
   };
 
   const {
@@ -16,7 +25,7 @@ export const FooterEmailCTA = () => {
     reValidateMode: "onBlur",
   });
 
-  return (
+  return formSent == false ? (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col mt-16 md:mt-0 mb-24 md:mb-56 lg:mb-0"
@@ -106,5 +115,7 @@ export const FooterEmailCTA = () => {
         )}
       </div>
     </form>
+  ) : (
+    <h2 className="text-white">Takk for at du registrerte deg!</h2>
   );
 };
