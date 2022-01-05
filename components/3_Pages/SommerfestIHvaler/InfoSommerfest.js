@@ -14,7 +14,10 @@ export const InfoSommerfest = ({
   info_image_height,
 }) => {
   return (
-    <section id="konsertpakker" className="bg-sommerfest_secondary  py-56 md:py-96 lg:py-160 z-1">
+    <section
+      id="konsertpakker"
+      className="bg-sommerfest_secondary  py-56 md:py-96 lg:py-160 z-1"
+    >
       <Layout>
         <Grid>
           <FourEightFive c="lg:col-start-2 lg:pr-24 grid justify-items-stretch  z-2">
@@ -28,9 +31,11 @@ export const InfoSommerfest = ({
             />
           </FourEightFive>
           <FourEightFive c="mt-24 lg:mt-0 z-2">
-            <h2 className="text-white text-h3 lg:text-h2 mb-8 lg:mb-16">{info_heading}</h2>
+            <h2 className="text-white text-h3 lg:text-h2 mb-8 lg:mb-16">
+              {info_heading}
+            </h2>
             {documentToReactComponents(info_content, options_sommerfest)}
-            <Link href="" className="">
+            <Link href="/kontakt-oss" className="">
               <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
                 Kjøp billetter til Sommerfest i Hvaler
               </a>
