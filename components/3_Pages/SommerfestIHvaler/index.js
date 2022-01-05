@@ -10,6 +10,7 @@ import { SommerfestGalleri } from "./sommerfest-galleri";
 
 export const SommerfestIHvaler = ({ content, dates }) => {
   const reversed_dates = [...dates].reverse();
+
   return (
     <>
       <NextSeo
@@ -42,6 +43,7 @@ export const SommerfestIHvaler = ({ content, dates }) => {
             hero_image_height={content.tittelbilde.height}
           />
           <div className="w-240 h-480 md:w-400 md:h-800 lg:w-640 lg:h-1280 inline-block half-circle-left mt-560 md:mt-800 lg:mt-240 sommerfest-gradient absolute z-0 left-0"></div>
+
           <InfoSommerfest
             info_heading={content.tittelKonsertpakke}
             info_content={content.konsertpakkeInnhold.json}
