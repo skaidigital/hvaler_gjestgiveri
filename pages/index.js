@@ -317,7 +317,6 @@ export async function getStaticProps() {
     }
   }
     `);
-  console.log(response);
   return {
     props: {
       content: response.forsideCollection.items[0],

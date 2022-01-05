@@ -17,33 +17,6 @@ const checkConsent = () => {
   }
 };
 
-const logo = (
-  <svg
-    width="48"
-    height="48"
-    viewBox="0 0 512 512"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g clipPath="url(#clip0)">
-      <rect width="512" height="512" rx="256" fill="#ffffff" />
-      <path
-        d="M370.545 199.545C361.455 152.273 323.636 122.091 258.182 122.091C190.909 122.091 145.091 155.182 145.273 206.818C145.091 247.545 170.182 274.455 223.818 285.545L271.455 295.545C297.091 301.182 309.091 311.545 309.091 327.364C309.091 346.455 288.364 360.818 257.091 360.818C226.909 360.818 207.273 347.727 201.636 322.636L137.455 328.818C145.636 380.091 188.727 410.455 257.273 410.455C327.091 410.455 376.364 374.273 376.545 321.364C376.364 281.545 350.727 257.182 298 245.727L250.364 235.545C222 229.182 210.727 219.364 210.909 203.182C210.727 184.273 231.636 171.182 259.091 171.182C289.455 171.182 305.455 187.727 310.545 206.091L370.545 199.545Z"
-        fill="#25777E"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0">
-        <rect width="512" height="512" rx="256" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-);
-
-const test = () => {
-  return "test";
-};
-
 const CookieConsentComponent = () => {
   return (
     <Layout>
@@ -72,9 +45,9 @@ const CookieConsentComponent = () => {
           alignSelf: "flex-center",
         }}
         buttonText="Aksepter"
-        onAccept={() => {
-          checkConsent();
-        }}
+        // onAccept={() => {
+        //   checkConsent();
+        // }}
         style={{ background: "#3F8DAB" }}
       >
         <div className="flex flex-col lg:flex-row">
