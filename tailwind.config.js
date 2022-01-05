@@ -1,4 +1,4 @@
-// ! Only edit where there is blue text.
+  // ! Only edit where there is blue text.
 module.exports = {
   theme: {
     fontSize: {
