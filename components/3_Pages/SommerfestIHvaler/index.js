@@ -35,6 +35,7 @@ export const SommerfestIHvaler = ({ content, dates }) => {
           info_image_src={content.bildeKonsertpakke.url}
           info_image_alt={content.bildeKonsertpakke.description}
           info_image_width={content.bildeKonsertpakke.width}
+          purchase_href={content.ticketmasterLink}
           info_image_height={content.bildeKonsertpakke.height}
         />
       </div>
