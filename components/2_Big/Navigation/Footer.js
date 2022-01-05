@@ -51,7 +51,7 @@ export const Footer = () => {
               <a
                 className="text-white underline"
                 target="blank"
-                href="mailto:post@hvalergjestegiveri.no"
+                href="mailto:post@hvalergjestgiveri.no"
               >
                 post@hvalergjestgiveri.no
               </a>
