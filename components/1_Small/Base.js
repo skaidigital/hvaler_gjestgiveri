@@ -269,6 +269,13 @@ export const FourSixSix = ({ c, children, id }) => {
     </div>
   );
 };
+export const FourSixEight = ({ c, children, id }) => {
+  return (
+    <div key={id} className={`${c} col-span-4 md:col-span-6 lg:col-span-8`}>
+      {children}
+    </div>
+  );
+};
 
 export const FourEightFour = ({ c, children, id }) => {
   return (

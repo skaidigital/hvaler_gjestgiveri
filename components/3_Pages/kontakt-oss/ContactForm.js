@@ -6,6 +6,8 @@ import {
   FourEightSix,
   FourFourFour,
   FourFourThree,
+  FourSixEight,
+  FourSixSix,
   Grid,
 } from "../../1_Small/Base";
 
@@ -33,7 +35,22 @@ export const ContactForm = () => {
     reValidateMode: "onBlur",
   });
 
-  return (
+  const SubmittedFormConfirmation = () => {
+    return (
+      <Grid c="bg-primary_500 my-32 md:my-56 lg:my-96">
+        <FourSixEight c="md:col-start-2 lg:col-start-3 py-32 md:py-56 lg:py-96 ">
+          <div className="text-h4 md:text-h3 lg:text-h2 font-semibold flex px-16 md:px-0">
+            {check} Vi har mottatt din henvendelse! <br />
+            Vi svarer deg så snart vi har anledning!
+          </div>
+        </FourSixEight>
+      </Grid>
+    );
+  };
+
+  return formSent ? (
+    <SubmittedFormConfirmation />
+  ) : (
     <form
       onSubmit={handleSubmit(onSubmit)}
       id="kontaktskjema"
@@ -237,3 +254,20 @@ export const ContactForm = () => {
     </form>
   );
 };
+
+const check = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="feather feather-check mt-8 mr-16 rounded-circle bg-secondary_700 stroke-primary_500 p-4"
+  >
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+);
