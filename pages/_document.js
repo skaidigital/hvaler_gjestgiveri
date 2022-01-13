@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     // TODO Paste the GA tracking in the string below and uncomment the code in the <Head>-tag"
-    const GA_MEASUREMENT_ID = "GA_MEASUREMENT_ID";
+    const GA_MEASUREMENT_ID = "298360434";
     return (
       <Html lang="nb">
         <Head>
@@ -16,7 +16,7 @@ class MyDocument extends Document {
             name="google-site-verification"
             content="s8uFtMKhLMi4slj-AIukxLAc_9WlrpQ6WOKWUoJL2y4"
           />
-          {/* <script
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           />
@@ -30,7 +30,7 @@ class MyDocument extends Document {
                   page_path: window.location.pathname,
                 });
               `,
-          }} */}
+          }}
         </Head>
         <body>
           <Main />
