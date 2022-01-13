@@ -41,10 +41,10 @@ export const FooterEmailCTA = () => {
             htmlFor="email"
             className={`${
               !errors.email
-                ? "text-secondary_700 focus-within:border-secondary_700 focus-within:border-2"
+                ? "text-black focus-within:border-secondary_700 "
                 : "text-danger_700 border-danger_700"
             } 
-                          flex flex-col text-body_medium font-semibold text-secondary_700 border-1 border-neutral_100 pl-8 py-4 rounded-4`}
+                          flex flex-col text-body_medium font-semibold text-neutral-700 border-1 border-neutral_100 pl-8 py-4 rounded-4`}
           >
             <div className="flex items-center mb-4">
               {/* <span className="mr-8">{cart}</span> */}
@@ -116,6 +116,13 @@ export const FooterEmailCTA = () => {
       </div>
     </form>
   ) : (
-    <h2 className="text-white">Takk for at du registrerte deg!</h2>
+    <div>
+      <h2 className="text-h4 md:text-h3 text-white">
+        Takk for at du registrerte deg!
+      </h2>
+      <div className="text-neutral_200">
+        Du er nå oppmeldt til vårt nyhetsbrev!
+      </div>
+    </div>
   );
 };
