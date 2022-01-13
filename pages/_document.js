@@ -12,6 +12,10 @@ class MyDocument extends Document {
     return (
       <Html lang="nb">
         <Head>
+          <meta
+            name="google-site-verification"
+            content="s8uFtMKhLMi4slj-AIukxLAc_9WlrpQ6WOKWUoJL2y4"
+          />
           {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
