@@ -17,7 +17,7 @@ export const HeroSommerfest = ({
 }) => {
   return (
     <>
-      <NavbarSommerfest />
+      {/* <NavbarSommerfest /> */}
       <section
         id="hero"
         className="bg-sommerfest_primary pt-24 pb-56 md:pb-96 lg:py-160 "
