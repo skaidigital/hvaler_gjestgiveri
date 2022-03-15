@@ -11,6 +11,7 @@ import { SommerfestGalleri } from "./sommerfest-galleri";
 export const SommerfestIHvaler = ({ content, dates }) => {
   const reversed_dates = [...dates].reverse();
 
+  // Denne rendrer festivalinnholdet, så uten link er det ingen innhold
   const purchaseLink = content.ticketmasterLink != null ? true : false;
 
   const renderedContent = purchaseLink ? (
