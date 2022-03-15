@@ -100,7 +100,7 @@ export const FestivaldagerSommerfest = ({ dates }) => {
           <SingleDate
             key={id}
             date={formatted_date}
-            artists1={artister1}
+            artists1={artists1}
             location1={hvor1}
             time1={tidspunkt1}
             artists2={artists2}
@@ -125,7 +125,7 @@ export const FestivaldagerSommerfest = ({ dates }) => {
           <FourEightEight c="lg:col-start-3">
             <h2 className="text-white mb-8 md:mb-16">Festivaldagene</h2>
             <MapDates />
-            <Link href="">
+            <Link href="https://www.ticketmaster.no/search?keyword=Hvaler%20Gjestgiveri">
               <a className="bg-sommerfest_CTA text-white flex justify-center py-16 font-semibold mb-56 md:mb-96 lg:mb-160 mt-24">
                 Kjøp billetter til årets største fest
               </a>
