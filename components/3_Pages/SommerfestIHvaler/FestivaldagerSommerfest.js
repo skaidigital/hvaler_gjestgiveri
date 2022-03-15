@@ -118,11 +118,11 @@ export const FestivaldagerSommerfest = ({ dates }) => {
   return (
     <section
       id="festivaldager"
-      className="flex flex-col text-white bg-sommerfest_primary"
+      className="flex flex-col text-white bg-sommerfest_primary z-1"
     >
       <Layout>
         <Grid>
-          <FourEightEight c="lg:col-start-3">
+          <FourEightEight c="lg:col-start-3 z-1">
             <h2 className="text-white mb-8 md:mb-16">Festivaldagene</h2>
             <MapDates />
             <Link href="https://www.ticketmaster.no/search?keyword=Hvaler%20Gjestgiveri">
