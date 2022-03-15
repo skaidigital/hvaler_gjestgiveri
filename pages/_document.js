@@ -20,8 +20,8 @@ class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           />
-          dangerouslySetInnerHTML=
-          {{
+          {/* dangerouslySetInnerHTML=
+{{
             __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -30,7 +30,7 @@ class MyDocument extends Document {
                   page_path: window.location.pathname,
                 });
               `,
-          }}
+          }} */}
         </Head>
         <body>
           <Main />

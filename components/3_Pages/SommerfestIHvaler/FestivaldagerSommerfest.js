@@ -4,7 +4,18 @@ import { PrimaryButtonHref } from "../../1_Small/Buttons";
 import { formatDate } from "../../1_Small/formatDate";
 
 export const FestivaldagerSommerfest = ({ dates }) => {
-  const SingleDate = ({ date, artists1, location1, time1, artists2, location2, time2, artists3, location3, time3 }) => {
+  const SingleDate = ({
+    date,
+    artists1,
+    location1,
+    time1,
+    artists2,
+    location2,
+    time2,
+    artists3,
+    location3,
+    time3,
+  }) => {
     return (
       <div className="flex flex-col mb-16">
         <h3 className="text-white">{date}</h3>
@@ -65,7 +76,21 @@ export const FestivaldagerSommerfest = ({ dates }) => {
 
   const MapDates = () => {
     return dates.map(
-      ({ artister1, dato, hvor1, tidspunkt1, artister2, hvor2, tidspunkt2, artister3, hvor3, tidspunkt3 }, id) => {
+      (
+        {
+          artister1,
+          dato,
+          hvor1,
+          tidspunkt1,
+          artister2,
+          hvor2,
+          tidspunkt2,
+          artister3,
+          hvor3,
+          tidspunkt3,
+        },
+        id
+      ) => {
         const formatted_date = formatDate(dato);
         const artists1 = artister1.split(",");
         const artists2 = artister2 ? artister2.split(",") : "";
@@ -75,7 +100,7 @@ export const FestivaldagerSommerfest = ({ dates }) => {
           <SingleDate
             key={id}
             date={formatted_date}
-            artists1={artists1}
+            artists1={artister1}
             location1={hvor1}
             time1={tidspunkt1}
             artists2={artists2}
@@ -91,7 +116,10 @@ export const FestivaldagerSommerfest = ({ dates }) => {
   };
 
   return (
-    <section id="festivaldager" className="flex flex-col text-white bg-sommerfest_primary">
+    <section
+      id="festivaldager"
+      className="flex flex-col text-white bg-sommerfest_primary"
+    >
       <Layout>
         <Grid>
           <FourEightEight c="lg:col-start-3">

@@ -31,6 +31,9 @@ import { ImageContentful } from "../components/1_Small/ImageContentful";
 import { HeroWSideImage } from "../components/1_Small/HeroWSideImage";
 
 export default function Home({ content, nap, informasjonsfane }) {
+  console.log(content);
+  console.log(nap);
+  console.log(informasjonsfane);
   !content && RedirectPage();
 
   const image_loader = ({ src, width }) => {
