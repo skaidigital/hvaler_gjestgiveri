@@ -118,7 +118,7 @@ export const FestivaldagerSommerfest = ({ dates }) => {
   return (
     <section
       id="festivaldager"
-      className="flex flex-col text-white bg-sommerfest_primary z-1"
+      className="flex flex-col text-white bg-sommerfest_primary z-1 pt-56 md:pt-96 lg:pt-160"
     >
       <Layout>
         <Grid>
