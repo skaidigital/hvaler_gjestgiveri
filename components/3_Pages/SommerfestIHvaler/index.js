@@ -40,7 +40,6 @@ export const SommerfestIHvaler = ({ content, dates }) => {
         />
       )} */}
       {dates.length != 0 && <FestivaldagerSommerfest dates={reversed_dates} />}
-      <div className="mt-44"></div>
       <div className="w-240 h-480 md:w-400 md:h-800  inline-block half-circle mt-96 md:mt-64 lg:mt-80 sommerfest-gradient absolute z-[0] right-0"></div>
       <HeroSommerfest
         hero_seo_heading={content.seoHeading}
