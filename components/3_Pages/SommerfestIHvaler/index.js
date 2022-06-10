@@ -11,6 +11,12 @@ import { SommerfestGalleri } from "./sommerfest-galleri";
 export const SommerfestIHvaler = ({ content, dates }) => {
   const reversed_dates = [...dates].reverse();
 
+  function sortedDates() {
+    return reversed_dates.sort((a, b) => {
+      return new Date(a.dato) - new Date(b.dato);
+    });
+  }
+
   // Denne rendrer festivalinnholdet, så uten link er det ingen innhold
   const purchaseLink = content.ticketmasterLink != null ? true : false;
 
@@ -39,7 +45,7 @@ export const SommerfestIHvaler = ({ content, dates }) => {
           artist_names={content.navnUtvalgteArtister}
         />
       )}
-      {dates.length != 0 && <FestivaldagerSommerfest dates={reversed_dates} />}
+      {dates.length != 0 && <FestivaldagerSommerfest dates={sortedDates()} />}
       <div className="w-240 h-480 md:w-400 md:h-800  inline-block half-circle mt-96 md:mt-64 lg:mt-80 sommerfest-gradient absolute z-[0] right-0"></div>
       <HeroSommerfest
         hero_seo_heading={content.seoHeading}
@@ -51,9 +57,7 @@ export const SommerfestIHvaler = ({ content, dates }) => {
         hero_image_height={content.tittelbilde.height}
         purchase_href={content.ticketmasterLink}
       />
-      <SommerfestGalleri
-        gallery={content.bildegalleriSommerfestIHvalerCollection}
-      />
+      <SommerfestGalleri gallery={content.bildegalleriSommerfestIHvalerCollection} />
     </div>
   ) : (
     <div className="relative">
@@ -72,9 +76,7 @@ export const SommerfestIHvaler = ({ content, dates }) => {
         <div className="w-240 h-480 md:w-400 md:h-800 lg:w-640 lg:h-1280 inline-block half-circle-left mt-560 md:mt-800 lg:mt-240 sommerfest-gradient absolute z-0 left-0"></div>
       </div>
       <div className="pb-320 bg-sommerfest_primary">
-        <SommerfestGalleri
-          gallery={content.bildegalleriSommerfestIHvalerCollection}
-        />
+        <SommerfestGalleri gallery={content.bildegalleriSommerfestIHvalerCollection} />
       </div>
     </div>
   );

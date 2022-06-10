@@ -12,11 +12,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { options, options_sommerfest } from "../../1_Small/ContentfulOptions";
 import { ImageContentful } from "../../1_Small/ImageContentful";
 
-export const ArtisterSommfest = ({
-  artist_info,
-  artist_images,
-  artist_names,
-}) => {
+export const ArtisterSommfest = ({ artist_info, artist_images, artist_names }) => {
   const artist_array = artist_names.split(",");
 
   const MapHighlightedArtists = () => {
@@ -26,12 +22,7 @@ export const ArtisterSommfest = ({
       return (
         <TwoTwoFour key={url} c="mb-16 lg:mb-32">
           <div className="relative w-100 pb-100">
-            <ImageContentful
-              src={url}
-              alt={description}
-              layout="fill"
-              className="object-cover"
-            />
+            <ImageContentful src={url} alt={description} layout="fill" className="object-cover" />
           </div>
           <h3 className="text-white mt-8 relative">{artist_array[teller]}</h3>
         </TwoTwoFour>
@@ -40,10 +31,7 @@ export const ArtisterSommfest = ({
   };
 
   return (
-    <section
-      id="artister"
-      className="bg-sommerfest_primary  py-56 md:py-96 lg:py-160 z-1"
-    >
+    <section id="artister" className="bg-sommerfest_primary  py-56 md:py-96 lg:py-160 z-1">
       <Layout>
         <Grid>
           <FourEightEight c="lg:col-start-3 z-1">
