@@ -1,8 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { FourEightFive, Grid, Layout } from "../../1_Small/Base";
-import { PrimaryButtonHref } from "../../1_Small/Buttons";
-import { options, options_sommerfest } from "../../1_Small/ContentfulOptions";
 import Link from "next/link";
+import { FourEightFive, Grid, Layout } from "../../1_Small/Base";
+import { options_sommerfest } from "../../1_Small/ContentfulOptions";
 import { ImageContentful } from "../../1_Small/ImageContentful";
 
 export const InfoSommerfest = ({
@@ -35,10 +34,11 @@ export const InfoSommerfest = ({
               {info_heading}
             </h2>
             {documentToReactComponents(info_content, options_sommerfest)}
-            <Link href="/kontakt-oss" className="">
-              <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
-                Kjøp billetter til Sommerfest i Hvaler
-              </a>
+            <Link
+              href="/kontakt-oss"
+              className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block"
+            >
+              Kjøp billetter til Sommerfest i Hvaler
             </Link>
           </FourEightFive>
         </Grid>

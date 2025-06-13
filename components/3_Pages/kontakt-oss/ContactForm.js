@@ -1,41 +1,51 @@
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   FourEightEight,
-  FourEightSix,
   FourFourFour,
-  FourFourThree,
   FourSixEight,
-  FourSixSix,
   Grid,
 } from "../../1_Small/Base";
 
+const test = true;
+
 export const ContactForm = () => {
   const [formSent, setFormSent] = useState(false);
+  const [contactFormResponse, setContactFormResponse] = useState(null);
 
-  const onSubmit = (data) => {
-    setFormSent(true);
-    const form_data = JSON.stringify(data);
+  const onSubmit = async (data) => {
+    // setFormSent(true);
 
-    fetch("https://formspree.io/f/xdobkpyy", {
+    const response = await fetch("/api/send-contact-form/", {
       method: "POST",
-      body: form_data,
-      headers: {
-        Accept: "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
+
+    const result = await response.json();
+
+    if (test) {
+      setContactFormResponse(false);
+      setFormSent(true);
+    } else {
+      setContactFormResponse(result.success);
+      setFormSent(true);
+    }
   };
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
+    mode: "onChange",
     reValidateMode: "onBlur",
   });
 
-  const SubmittedFormConfirmation = () => {
+  console.log(errors);
+
+  if (formSent && contactFormResponse) {
     return (
       <Grid c="bg-primary_500 my-32 md:my-56 lg:my-96">
         <FourSixEight c="md:col-start-2 lg:col-start-3 py-32 md:py-56 lg:py-96 ">
@@ -46,11 +56,27 @@ export const ContactForm = () => {
         </FourSixEight>
       </Grid>
     );
-  };
+  }
 
-  return formSent ? (
-    <SubmittedFormConfirmation />
-  ) : (
+  if (contactFormResponse === false) {
+    return (
+      <Grid c="bg-primary_500 my-32 md:my-56 lg:my-96">
+        <FourSixEight c="md:col-start-2 lg:col-start-3 py-32 md:py-56 lg:py-96 ">
+          <div className="text-h4 md:text-h3 lg:text-h2 font-semibold flex px-16 md:px-0">
+            Det skjedde en feil når vi prøvde å sende inn skjemaet! <br />
+          </div>
+          <p>
+            Ta kontakt med oss direkte på{" "}
+            <a href={`mailto:post@hvalergjestgiveri.no`} className="underline">
+              post@hvalergjestgiveri.no
+            </a>
+          </p>
+        </FourSixEight>
+      </Grid>
+    );
+  }
+
+  return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       id="kontaktskjema"
@@ -123,7 +149,6 @@ export const ContactForm = () => {
           </div>
           <div className="h-18 mb-16" />
         </FourFourFour>
-
         {/* //! email */}
         <FourFourFour c="lg:col-start-3">
           <div className="flex flex-col ">
@@ -229,10 +254,12 @@ export const ContactForm = () => {
               Ved å sende inn skjemaet samtykker du til at vi lagrer
               informasjonen din. Du kan når som helst trekke tilbake samtykket.
               Les mer om hvordan vi håndterer dine data i vår{" "}
-              <Link href="/personvern">
-                <a target="blank" className="text-body_medium underline">
-                  personvernerklæring.
-                </a>
+              <Link
+                href="/personvern"
+                target="blank"
+                className="text-body_medium underline"
+              >
+                personvernerklæring.
               </Link>
             </span>
           </label>
@@ -245,7 +272,10 @@ export const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="py-16 text-center text-white bg-primary_700 font-semibold w-100"
+            className={`py-16 text-center text-white bg-primary_700 font-semibold w-100 ${
+              !isValid ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={!isValid}
           >
             Send min forespørsel
           </button>

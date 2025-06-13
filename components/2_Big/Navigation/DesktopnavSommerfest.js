@@ -1,24 +1,26 @@
 import Link from "next/link";
 import { Layout } from "../../1_Small/Base";
-import { PrimaryButtonHref } from "../../1_Small/Buttons";
-import { NavLinkSommerfest } from "../../1_Small/NavLinkSommerfest";
 
 export const DesktopnavSommerfest = () => {
   return (
     <Layout>
       <div className="flex justify-between my-24">
         <div className="self-center ">
-          <Link href="/">
-            <a className="text-h4 text-white font-semibold flex mb-0 items-center underline">
-              {chevron}
-              <span className="mx-4" /> Tilbake til Hvaler Gjestgiveri
-            </a>
+          <Link
+            href="/"
+            className="text-h4 text-white font-semibold flex mb-0 items-center underline"
+          >
+            {chevron}
+            <span className="mx-4" /> Tilbake til Hvaler Gjestgiveri
           </Link>
         </div>
         <div className="flex items-center">
           <div className="ml-32">
-            <Link href="">
-              <a className="bg-sommerfest_CTA text-body_medium py-16 px-24 text-white font-semibold">Kjøp billetter</a>
+            <Link
+              href=""
+              className="bg-sommerfest_CTA text-body_medium py-16 px-24 text-white font-semibold"
+            >
+              Kjøp billetter
             </Link>
           </div>
         </div>

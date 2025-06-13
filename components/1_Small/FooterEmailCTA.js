@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 export const FooterEmailCTA = () => {
   const [formSent, setFormSent] = useState(false);
 
@@ -97,13 +97,12 @@ export const FooterEmailCTA = () => {
           Ved å sende inn skjemaet samtykker du til at vi lagrer informasjonen
           din. Du kan når som helst trekke tilbake samtykket. Les mer om hvordan
           vi håndterer dine data i vår{" "}
-          <Link href="/personvern">
-            <a
-              target="blank"
-              className="text-body_medium underline text-neutral_50  "
-            >
-              personvernerklæring.
-            </a>
+          <Link
+            href="/personvern"
+            target="blank"
+            className="text-body_medium underline text-neutral_50  "
+          >
+            personvernerklæring.
           </Link>
         </span>
       </label>

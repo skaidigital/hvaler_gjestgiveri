@@ -1,9 +1,6 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { FourEightFive, Grid, Layout } from "../../1_Small/Base";
-import { options } from "../../1_Small/ContentfulOptions";
-import { ImageContentful } from "../../1_Small/ImageContentful";
-import { NavbarSommerfest } from "../../2_Big/Navigation/NavbarSommerfest";
 import Link from "next/link";
+import { FourEightFive, Grid, Layout } from "../../1_Small/Base";
+import { ImageContentful } from "../../1_Small/ImageContentful";
 
 export const HeroSommerfest = ({
   hero_seo_heading,
@@ -35,11 +32,9 @@ export const HeroSommerfest = ({
               {purchase_href != null ? (
                 <Link
                   href={purchase_href != null ? purchase_href : " "}
-                  className=""
+                  className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block"
                 >
-                  <a className="text-white text-center bg-sommerfest_CTA font-semibold p-16 block">
-                    Kjøp billetter til Sommerfest i Hvaler
-                  </a>
+                  Kjøp billetter til Sommerfest i Hvaler
                 </Link>
               ) : (
                 <></>

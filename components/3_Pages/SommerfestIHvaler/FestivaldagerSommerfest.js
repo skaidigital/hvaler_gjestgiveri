@@ -1,6 +1,5 @@
-import { Layout, Grid, FourEightEight } from "../../1_Small/Base";
 import Link from "next/link";
-import { PrimaryButtonHref } from "../../1_Small/Buttons";
+import { FourEightEight, Grid, Layout } from "../../1_Small/Base";
 import { formatDate } from "../../1_Small/formatDate";
 
 export const FestivaldagerSommerfest = ({ dates }) => {
@@ -125,10 +124,11 @@ export const FestivaldagerSommerfest = ({ dates }) => {
           <FourEightEight c="lg:col-start-3 z-1">
             <h2 className="text-white mb-8 md:mb-16">Festivaldagene</h2>
             <MapDates />
-            <Link href="https://www.ticketmaster.no/search?keyword=Hvaler%20Gjestgiveri">
-              <a className="bg-sommerfest_CTA text-white flex justify-center py-16 font-semibold mb-56 md:mb-96 lg:mb-160 mt-24">
-                Kjøp billetter til årets største fest
-              </a>
+            <Link
+              href="https://www.ticketmaster.no/search?keyword=Hvaler%20Gjestgiveri"
+              className="bg-sommerfest_CTA text-white flex justify-center py-16 font-semibold mb-56 md:mb-96 lg:mb-160 mt-24"
+            >
+              Kjøp billetter til årets største fest
             </Link>
           </FourEightEight>
         </Grid>
