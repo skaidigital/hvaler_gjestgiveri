@@ -3,10 +3,11 @@ import Link from "next/link";
 export const DropdownArrangement = () => {
   const NavItem = ({ href, children }) => {
     return (
-      <Link href={href}>
-        <a className="sexy-animation nav-hover hover:bg-neutral_300 px-16 py-8 font-medium">
-          {children}
-        </a>
+      <Link
+        href={href}
+        className="sexy-animation nav-hover hover:bg-neutral_300 px-16 py-8 font-medium"
+      >
+        {children}
       </Link>
     );
   };

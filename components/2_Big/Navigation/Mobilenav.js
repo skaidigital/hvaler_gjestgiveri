@@ -59,10 +59,11 @@ export const Mobilenav = () => {
     <>
       <Layout>
         <div className="flex justify-between py-24">
-          <Link href="/">
-            <a className="text-h3 font-semibold flex mb-0 self-center">
-              {storeNameOrLogo}
-            </a>
+          <Link
+            href="/"
+            className="text-h3 font-semibold flex mb-0 self-center"
+          >
+            {storeNameOrLogo}
           </Link>
 
           <div className="strek flex self-center" onClick={openFirstScreen}>

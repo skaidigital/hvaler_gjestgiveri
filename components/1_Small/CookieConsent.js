@@ -1,5 +1,5 @@
-import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import Link from "next/link";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import { Layout } from "./Base";
 // import { getPageFiles } from "next/dist/next-server/server/get-page-files";
 
@@ -57,10 +57,8 @@ const CookieConsentComponent = () => {
               integrert del av nettsiden vår. Vi bruker ingen cookies for
               markedsføringsformål. Vi bruker Google Analytics for
               nettsideanalyse.{" "}
-              <Link href="personvern">
-                <a className="underline text-white">
-                  Klikk her for å lese om vår personvernerklæring
-                </a>
+              <Link href="personvern" className="underline text-white">
+                Klikk her for å lese om vår personvernerklæring
               </Link>
             </p>
           </div>
